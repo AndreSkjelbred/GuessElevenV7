@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+h2,
+h3,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.profile-container {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 16.1vh;
+}
+
+.hidden-letters {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vh;
+}
+
+.label {
+  position: relative;
+  height: 11vh;
+  max-height: 8vw;
+  aspect-ratio: 1/1;
+  border-radius: 20%;
+  box-shadow: 0px 5px 4px black;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+}
+
+.profile-found {
+  margin-top: 0;
+
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+}
+.label h5 {
+  font-weight: 700;
+  font-family: "Questrial";
+  text-transform: uppercase;
+  margin: auto 0;
+}
+
+.medium-label {
+  font-size: 11px;
+}
+
+.small-label {
+  font-size: 8px;
+}
+
+.known {
+  justify-content: space-between;
+  height: 16.1vh;
+  aspect-ratio: 13/16.1;
+  color: #f1f6f5;
+}
+
+.gk-back {
+  background-color: rgb(9, 114, 9);
+}
+.def-back {
+  background-color: rgb(206, 206, 35);
+}
+.mid-back {
+  background-color: #82c3ec;
+}
+.for-back {
+  background-color: rgb(210, 9, 9);
+}
+
+.unknown {
+  background-image: linear-gradient(to bottom right, beige, beige);
+  animation: animation 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.unknown:hover {
+  background-image: linear-gradient(to bottom right, white, rgb(198, 191, 191));
+}
+
+.unknown:active {
+  scale: 0.95;
+  transition: 0.05s;
+  box-shadow: 0px 2px 2px black;
+}
+
+.lock-icon {
+  font-size: 6vh;
+}
+.letter-count {
+  position: absolute;
+  top: 50%;
+  color: #ccc;
+}
+
+@keyframes animation {
+  0% {
+    scale: 0;
+  }
+  80% {
+    scale: 1.2;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.one {
+  animation: animation 0.5s 0.2s, invisible 0.2s;
+}
+.two {
+  animation: animation 0.5s 0.4s, invisible 0.4s;
+}
+.three {
+  animation: animation 0.5s 0.6s, invisible 0.6s;
+}
+.four {
+  animation: animation 0.5s 0.8s, invisible 0.8s;
+}
+.five {
+  animation: animation 0.5s 1s, invisible 1s;
+}
+.six {
+  animation: animation 0.5s 1.2s, invisible 1.2s;
+}
+.seven {
+  animation: animation 0.5s 1.4s, invisible 1.4s;
+}
+.eight {
+  animation: animation 0.5s 1.6s, invisible 1.6s;
+}
+.nine {
+  animation: animation 0.5s 1.8s, invisible 1.8s;
+}
+.ten {
+  animation: animation 0.5s 2s, invisible 2s;
+}
+.eleven {
+  animation: animation 0.5s 2.2s, invisible 2.2s;
+}
+
+.hide-icon-title:hover {
+  pointer-events: none;
+}
+@media screen and (max-width: 1100px) {
+  .label {
+    max-height: 8vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .label {
+    max-height: 6vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .label {
+    width: 7vw;
+    aspect-ratio: 1/1;
+  }
+  .lock-icon {
+    font-size: 3vh;
+  }
+  .letter-count {
+    position: absolute;
+    top: 40%;
+
+    color: #ccc;
+  }
+}

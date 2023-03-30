@@ -1,0 +1,81 @@
+.game-info-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: fit-content;
+  width: 35vw;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 3rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.close-info-modal {
+  position: absolute;
+  top: 0rem;
+  right: 2rem;
+  font-size: 8rem;
+  height: 8rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.team-info-column {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: fit-content;
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+}
+
+.team-info-column > * {
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.current-team {
+  color: green;
+}
+
+.hidden {
+  display: none;
+}
+
+.info-line-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 0.5px solid white;
+  font-family: "Marcellus";
+}
+
+.info-line-container:hover {
+  border-bottom: 0.5px solid grey;
+}
+
+.gold {
+  color: gold;
+}
+
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}

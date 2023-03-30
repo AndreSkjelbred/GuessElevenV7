@@ -1,0 +1,48 @@
+.confetti-ball {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 9rem;
+  width: 9rem;
+  color: blue;
+  z-index: 2;
+}
+
+.confetti-ball-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.confetti-ball {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  position: relative;
+  background: url("https://raw.githubusercontent.com/Yousuke777/texture/main/soccer-ball-02.png")
+    repeat;
+  background-size: 200%;
+  box-shadow: -2rem -1rem 3rem rgba(0, 0, 0, 0.75) inset;
+  animation: rotate-anim 2s linear infinite;
+}
+
+.confetti-ball:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.5rem;
+  margin: auto;
+  width: 8rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #000;
+  filter: blur(0.5rem);
+  z-index: -1;
+}
+
+@keyframes rotate-anim {
+  100% {
+    background-position: -100% 0;
+  }
+}

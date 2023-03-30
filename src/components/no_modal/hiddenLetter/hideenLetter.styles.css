@@ -1,0 +1,9 @@
+.dot {
+  font-size: 1.1vh;
+}
+
+@media screen and (max-width: 600px) {
+  .dot {
+    font-size: 0.6vh;
+  }
+}

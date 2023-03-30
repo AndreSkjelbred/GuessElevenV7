@@ -1,0 +1,17 @@
+.hidden-face-root-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.player-img-container {
+  margin-top: 10rem;
+  height: 20rem;
+  aspect-ratio: 1/1;
+}
+
+.blur-img {
+  filter: blur(15px);
+}

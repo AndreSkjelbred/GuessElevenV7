@@ -1,0 +1,245 @@
+.home-game-navigation {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  height: 80vh;
+  min-height: 50rem;
+  width: 30rem;
+
+  font-size: 1.2rem;
+  margin-left: 3vw;
+  font-family: "Marcellus";
+  display: flex;
+  color: #feffff;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: linear-gradient(
+    to right,
+    rgba(4, 19, 61, 0.421),
+    rgba(1, 1, 37, 0.788)
+  );
+  border-radius: 5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .home-game-navigation {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25vh;
+    margin-left: 0;
+    width: 80vw;
+    flex-direction: row;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-game-navigation {
+    font-size: 2rem;
+  }
+}
+
+.home-game-navigation > div > div > h2 {
+  color: #f1f6f5;
+  text-shadow: 0.2rem 0.2rem 0.5rem white;
+
+  color: #ffffff;
+}
+
+.home-game-navigation > h3 {
+  opacity: 0.4;
+}
+
+.home-game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  gap: 5rem;
+  width: calc(30 / 6 * 5rem);
+  position: relative;
+}
+
+.nav-column-item-container {
+  display: flex;
+  width: 24rem;
+  height: 35%;
+  align-items: center;
+  border-radius: 1rem;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+  .nav-column-item-container {
+    width: 30rem;
+  }
+}
+
+.games-link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .games-link-container {
+  }
+}
+
+.text-container {
+  height: 65%;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  z-index: 10000;
+}
+
+.read-more-btn {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+  color: #3a78f9;
+}
+
+@media screen and (max-width: 480px) {
+  .read-more-btn {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+    color: #3a78f9;
+  }
+}
+
+.read-more-icon-btn {
+  color: white;
+}
+
+.video-play-button {
+  position: relative;
+  z-index: 10;
+
+  box-sizing: content-box;
+  display: block;
+  width: 3.2rem;
+  height: 4.4rem;
+  /* background: #fa183d; */
+  border-radius: 50%;
+  padding: 1.8rem 2rem 1.8rem 2.8rem;
+}
+
+.video-play-button:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  background: #0072c6;
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.video-play-button:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  background: #0072c6;
+  border-radius: 50%;
+  transition: all 200ms;
+}
+
+.video-play-button:hover:after {
+  background-color: darken(#0072c6, 10%);
+}
+
+.video-play-button img {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.video-play-button span {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 2.4rem solid #fff;
+  border-top: 1.7rem solid transparent;
+  border-bottom: 1.7rem solid transparent;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.play-btn-home {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1000px) {
+  .video-play-button {
+    width: 2.1rem;
+    height: 2.9rem;
+    padding: 1.2rem 1.33rem 1.2rem 1.9rem;
+  }
+
+  .video-play-button:after {
+    width: 5.3rem;
+    height: 5.3rem;
+  }
+
+  video-play-button:before {
+    width: 5.3rem;
+    height: 5.3rem;
+  }
+
+  .video-play-button span {
+    border-left: 1.9rem solid #fff;
+    border-top: 1.45rem solid transparent;
+    border-bottom: 1.45rem solid transparent;
+  }
+}
+
+.margin-up {
+  margin-top: 1rem;
+}

@@ -1,0 +1,56 @@
+.btn-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.lgn-btn {
+  background-color: transparent;
+  border-radius: 5rem;
+  border: none;
+  height: 100%;
+  font-family: "Marcellus";
+  font-size: 1.8rem;
+
+}
+
+.login {
+
+  color: rgb(255, 255, 255);
+}
+
+.register {
+  color: #ffffff;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.info-button {
+  height: 100%;
+  padding: 25px;
+  color: rgba(255, 255, 255);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.info-btn-icon {
+  height: 2.0em;
+  width: 2.0em;
+}
+
+.about-btn, .contact-btn {
+  background-color: transparent;
+  border-radius: 5rem;
+  border: none;
+  height: 100%;
+  font-family: "Marcellus";
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+
+

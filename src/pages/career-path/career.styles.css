@@ -1,0 +1,147 @@
+.career-page {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(5, 5, 5, 0.748),
+      rgba(3, 3, 3, 0.786)
+    ),
+    url("/careerpath.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  top: 0;
+  bottom: 0;
+  min-height: 100vh;
+}
+
+.club-info-container {
+  padding-top: 20rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  align-items: center;
+  max-height: 50%;
+}
+
+@media only screen and (min-width: 600px) {
+  .club-info-container {
+    gap: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .club-info-container {
+    gap: 0.5rem;
+    padding-top: 13rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .club-info-container {
+    padding-top: 8rem;
+  }
+}
+
+.career-input-container {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 60vw;
+}
+
+@media only screen and (min-width: 720px) {
+  .career-input-container {
+    margin-top: 7rem;
+  }
+}
+
+.input-career {
+  height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(173, 170, 170, 1);
+
+  border: none;
+  text-transform: capitalize;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn-3d-sub {
+  width: 20%;
+  height: 60px;
+  font-family: "Marcellus";
+  border-bottom: 5px solid #173814;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  background: linear-gradient(#469e3f, #255b20);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px grey;
+  transition: 150ms ease;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.btn-3d-sub:active {
+  border: none;
+  border-bottom: 2px solid steelblue;
+  box-shadow: 0px 1px 5px grey;
+  background: linear-gradient(#255b20, #469e3f);
+  color: #fff;
+}
+
+.search-area-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .search-area-container {
+    gap: 2.5rem;
+  }
+}
+
+.player-options-container {
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media only screen and (min-width: 720px) {
+  .player-options-container {
+    gap: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .player-options-container {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .player-options-container {
+    gap: 0.8rem;
+  }
+}
+
+.guessed-players-container-box {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 10rem;
+  gap: 4rem;
+}

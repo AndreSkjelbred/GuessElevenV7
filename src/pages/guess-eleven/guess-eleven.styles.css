@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.guess-eleven-container {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.397),
+      rgba(0, 0, 0, 0.43)
+    ),
+    url(/brother3.jpg);
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.start-transform {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgb(136, 12, 64), rgb(109, 3, 21));
+}
+
+@keyframes addBlackScreen {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.video {
+  min-height: 100%;
+  width: 100%;
+}
+
+.logo {
+  font-size: 2rem;
+  z-index: 1000;
+  height: fit-content;
+}

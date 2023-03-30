@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-area-container {
+  height: calc(100vh - 80px);
+  width: 80vw;
+
+  background-position: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .game-area-container {
+    height: calc(90vh - 80px);
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .game-area-container {
+    width: 100vw;
+    height: calc(80vh - 80px);
+  }
+}
+
+.area-background-inactive {
+  /*   background-image: url("../../../assets/guessEleven.png");
+  background-repeat: no-repeat;
+
+  background-size: 50% 50%; */
+}
+
+.game-screen-container {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  justify-content: center;
+  width: 100vw;
+  margin-right: 1px;
+  margin-left: 1px;
+  margin-top: 80px;
+}
+
+.formation-root {
+  z-index: 100;
+}

@@ -1,0 +1,81 @@
+.home-review {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  height: 80vh;
+  min-height: 50rem;
+  width: 35rem;
+  right: 0;
+  font-size: 1.2rem;
+  margin-left: 3vw;
+  font-family: "Marcellus";
+  display: flex;
+
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  color: rgb(81, 149, 239);
+}
+
+@media screen and (max-width: 1000px) {
+  .home-review {
+    display: none;
+  }
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 10vh;
+  background-image: linear-gradient(to right,
+      rgba(4, 4, 4, 0.099),
+      rgba(1, 1, 37, 0.712));
+  font-family: "Questrial";
+  width: 100%;
+  border-radius: 10rem;
+}
+
+.review-container>h3 {
+  margin-top: 1rem;
+  color: white;
+}
+
+.review-container>h2 {
+  background: -webkit-linear-gradient(#eee, rgb(134, 134, 134));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+
+.home-stars {
+  position: absolute;
+  top: 40%;
+  height: 6.4rem;
+}
+
+.cursive {
+  position: relative;
+  background-image: linear-gradient(to right,
+      rgba(4, 4, 4, 0.099),
+      rgba(1, 1, 37, 0.712));
+  font-style: italic;
+}
+
+.default-review {
+  position: relative;
+  background-image: linear-gradient(to right,
+      rgba(4, 4, 4, 0.099),
+      rgba(1, 1, 37, 0.712));
+  font-style: italic;
+}
+
+.default-quote-background {
+  position: relative;
+  background-image: linear-gradient(to right,
+      rgba(4, 4, 4, 0.099),
+      rgba(1, 1, 37, 0.712));
+  font-style: italic;
+}

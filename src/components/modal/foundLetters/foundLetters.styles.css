@@ -1,0 +1,33 @@
+.found-modal {
+  position: absolute;
+
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+
+  background-color: black;
+  padding: 1rem 2rem;
+
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  color: #1ba98c;
+  color: white;
+  background: linear-gradient(
+    to right,
+    rgba(4, 28, 66, 1),
+    rgb(79, 11, 148),
+    rgb(58, 58, 216)
+  );
+  color: #f1f6f5;
+  box-shadow: 0.1rem 0.1rem 0.5rem black;
+}
+
+.found-letters-flex {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  color: rgb(204, 204, 62);
+  color: #1ba98c;
+}

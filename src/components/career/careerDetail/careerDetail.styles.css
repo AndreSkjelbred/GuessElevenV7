@@ -1,0 +1,53 @@
+.career-detail-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: aliceblue;
+  color: black;
+  font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .career-detail-box {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .career-detail-box {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .career-detail-box {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 81.25em) {
+  .career-detail-box {
+    font-size: 0.7rem;
+  }
+}
+
+.career-detail-title {
+  color: rgb(192, 192, 192);
+}
+
+.career-detail-infoindex {
+  font-size: 2rem;
+  color: white;
+}
+
+@media only screen and (min-width: 720px) {
+  .career-detail-infoindex {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 81.25em) {
+  .career-detail-infoindex {
+    font-size: 1rem;
+  }
+}

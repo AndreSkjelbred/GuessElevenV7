@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+
+  background-color: white;
+
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  html {
+    font-size: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 4px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 3px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+  position: relative;
+}
+
+.root-container {
+  position: relative;
+  height: 100vh;
+  flex-grow: 1;
+  background-image: linear-gradient(to top right,
+      rgba(0, 0, 0, 0.858),
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.81)),
+    linear-gradient(to bottom right,
+      rgba(0, 0, 0, 0.808),
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.918));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-image {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-title {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 9rem;
+  color: #3A78F9;
+  color: #3A78F9;
+  letter-spacing: 0.6rem;
+  font-family: "Bebas Neue";
+  text-shadow: 0.2rem 0.3rem 0.3rem white;
+}
+
+@media screen and (max-width: 1000px) {
+  .home-title {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    font-size: 12rem;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-title {
+    font-size: 20rem;
+  }
+}

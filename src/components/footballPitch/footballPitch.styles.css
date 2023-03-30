@@ -1,0 +1,201 @@
+.area-background-active {
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+  background-image: linear-gradient(
+    to top,
+    rgba(75, 141, 246, 0.253),
+    rgba(75, 141, 246, 0.797)
+  );
+
+  clip-path: polygon(20% 0, 2% 100%, 98% 100%, 80% 0);
+}
+
+.line {
+  position: absolute;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}
+
+.left-line {
+  clip-path: polygon(20% 0, 2% 100%, 3% 100%, 21% 0);
+}
+
+.right-line {
+  clip-path: polygon(80% 0, 98% 100%, 97% 100%, 79% 0);
+}
+
+.bottom-line {
+  position: absolute;
+  height: 0.8vw;
+  bottom: 0;
+}
+
+.sixteen-left {
+  position: absolute;
+
+  height: 30%;
+  clip-path: polygon(32.4% 0, 27% 100%, 28% 100%, 33.4% 0);
+}
+
+.sixteen-right {
+  position: absolute;
+
+  height: 30%;
+  clip-path: polygon(65.6% 0, 71% 100%, 70% 100%, 64.6% 0);
+}
+.sixteen-inside-right {
+  position: absolute;
+
+  height: 15%;
+  clip-path: polygon(59.5% 0, 61% 100%, 60% 100%, 58.5% 0);
+}
+
+.sixteen-inside-left {
+  position: absolute;
+  clip-path: polygon(38.5% 0, 37% 100%, 38% 100%, 39.5% 0);
+  height: 15%;
+}
+
+.sixteen-inside-middle {
+  position: absolute;
+
+  height: 100%;
+  clip-path: polygon(39.5% 85%, 39.3% 86%, 58.7% 86%, 58.54% 85%);
+}
+
+.sixteen-front {
+  position: absolute;
+
+  height: 100%;
+  clip-path: polygon(33.4% 70%, 33.2% 71%, 64.8% 71%, 64.64% 70%);
+}
+
+.half-circle {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+  transform: translate(-50%) rotate(180deg);
+  height: 10vh;
+}
+
+.top-line {
+  position: absolute;
+  height: 0.3vw;
+  clip-path: polygon(5% 0, 99% 0, 99% 100%, 5% 100%);
+  top: 0;
+}
+
+.behind-line {
+  opacity: 0.2;
+}
+
+.line-one {
+  position: absolute;
+  height: 10vh;
+  clip-path: polygon(5% 0, 99% 0, 99% 100%, 5% 100%);
+  top: 5vh;
+}
+
+.line-two {
+  position: absolute;
+  height: 10vh;
+  clip-path: polygon(5% 0, 99% 0, 99% 100%, 5% 100%);
+  top: 25vh;
+}
+
+.line-three {
+  position: absolute;
+  height: 10vh;
+  clip-path: polygon(5% 0, 99% 0, 99% 100%, 5% 100%);
+  top: 45vh;
+}
+
+.line-four {
+  position: absolute;
+  height: 10vh;
+  clip-path: polygon(5% 0, 99% 0, 99% 100%, 5% 100%);
+  top: 65vh;
+}
+
+.line-five {
+  position: absolute;
+  height: 10vh;
+  clip-path: polygon(0% 0, 99% 0, 99% 100%, 0% 100%);
+  top: 85vh;
+}
+
+.primary-team-logo {
+  position: relative;
+  height: 13vh;
+  padding-bottom: 4vh;
+  border-bottom: white 2px solid;
+}
+
+.guess-logo {
+  border-bottom: green solid;
+}
+
+.football-pitch-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  width: 10vw;
+}
+
+.new-game-icon {
+  font-size: 3rem;
+  color: aliceblue;
+}
+
+.new-game-icon:hover {
+  color: #ccc;
+}
+
+.info-modal-icon {
+  font-size: 3rem;
+  color: aliceblue;
+}
+
+.info-modal-icon:hover {
+  color: #ccc;
+}
+
+@keyframes hideIcons {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleSmallBig {
+  0% {
+    scale: 0.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.scaleClass {
+  animation: hideIcons 1s, scaleSmallBig 2s 1s;
+}
+
+@media screen and (max-width: 1200px) {
+  .primary-team-logo {
+    display: none;
+  }
+  .football-pitch-container {
+    justify-content: center;
+  }
+  .football-pitch-container > * {
+    font-size: 8rem;
+  }
+}

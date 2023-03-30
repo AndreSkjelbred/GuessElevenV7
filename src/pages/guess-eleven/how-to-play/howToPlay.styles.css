@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather&display=swap");
+
+.ge-how-to-play-root {
+  background-color: rgb(70, 68, 68);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(3, 23, 87, 0.748),
+      rgba(2, 20, 69, 0.786)
+    ),
+    url(/assets/htpBackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.htp-intro {
+  color: white;
+  margin-top: 5rem;
+  width: 50%;
+  text-align: start;
+  line-height: 4rem;
+  font-family: "Merriweather";
+  font-size: 1.8rem;
+}
+
+.htp-section {
+  display: flex;
+  color: white;
+  align-items: center;
+  position: relative;
+  width: 70%;
+  justify-content: center;
+  margin-top: 10rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.004),
+    rgba(255, 255, 255, 0.475)
+  );
+  gap: 2rem;
+  padding: 1.6rem;
+  height: 24rem;
+  border-radius: 3rem;
+}
+
+.inverted-section {
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.004),
+    rgba(255, 255, 255, 0.475)
+  );
+}
+
+.htp-text {
+  font-family: "Bebas Neue";
+  font-size: 2.4rem;
+  color: rgb(243, 243, 243);
+  text-align: start;
+  width: 70%;
+}

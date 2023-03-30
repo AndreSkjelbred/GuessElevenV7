@@ -1,0 +1,13 @@
+.htp-circle {
+  height: 12.8rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: rgb(18, 116, 220);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 4.8rem;
+  font-family: "Merriweather";
+  opacity: 0.6;
+}

@@ -1,0 +1,96 @@
+.career-club-container {
+  width: 50vw;
+  aspect-ratio: 7/1;
+  background-color: rgba(51, 125, 221, 0.651);
+  background-color: #efefef;
+  border: solid rgba(51, 125, 221, 0.651);
+
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  flex: 1;
+  font-family: "Verdana";
+
+  position: relative;
+}
+
+@media only screen and (min-width: 600px) {
+  .career-club-container {
+    width: 45vw;
+    aspect-ratio: 8/1;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .career-club-container {
+    width: 40vw;
+    aspect-ratio: 8/1;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .career-club-container {
+    width: 35vw;
+    aspect-ratio: 9/1;
+  }
+}
+
+@media only screen and (min-width: 81.25em) {
+  .career-club-container {
+    width: 20vw;
+  }
+}
+
+.career-club-container > div:first-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2%;
+  max-width: 40%;
+}
+
+.career-club-container > div:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 45%;
+}
+
+.career-club-container > div:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 60%;
+}
+
+.career-club-container > div:nth-child(4) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 75%;
+}
+
+.career-club-container > div:nth-child(5) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 90%;
+}
+
+.index {
+  background-color: black;
+}
+
+/* @media only screen and (min-width: 600px) {
+  .career-club-container {
+    width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .career-club-container {
+    width: 40vw;
+  }
+} */
