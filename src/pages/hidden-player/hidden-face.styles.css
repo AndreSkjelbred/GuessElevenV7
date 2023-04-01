@@ -6,12 +6,31 @@
   min-height: 100vh;
 }
 
-.player-img-container {
-  margin-top: 10rem;
-  height: 20rem;
-  aspect-ratio: 1/1;
+.hidden-face-root-container>* {
+  z-index: 1;
 }
 
 .blur-img {
   filter: blur(15px);
+  border: solid blue;
+}
+
+.player-img-container {
+  margin-top: 8rem;
+  height: 25rem;
+  aspect-ratio: 1/1;
+  box-shadow: 10px 10px 1px black;
+}
+
+.career-input-container input {
+  margin-top: -25px;
+  border-radius: 10px;
+  width: 40%;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.guessed-profile-container {
+  width: 40%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }

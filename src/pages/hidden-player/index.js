@@ -90,7 +90,7 @@ function HiddenPlayer() {
 
   return (
     <div className='hidden-face-root-container'>
-      <div className='higher-lower-back-image'>
+      <div className='hidden-player-back-image'>
         <Image fill src='/hiddenplayer.jpeg' />
       </div>
       <HomeNavbar />
