@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
 .hidden-face-root-container {
   display: flex;
   flex-direction: column;
@@ -13,6 +16,7 @@
 .blur-img {
   filter: blur(15px);
   border: solid blue;
+  border-radius: 10px;
 }
 
 .player-img-container {
@@ -26,11 +30,16 @@
   margin-top: -25px;
   border-radius: 10px;
   width: 40%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.536);
+  border: solid rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  font-family: "Alkatra", cursive;
 }
 
 .guessed-profile-container {
   width: 40%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.536);
 }
