@@ -1,22 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
 
 .higher-lower-page-container {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+
   align-items: center;
+  justify-content: center;
   font-family: "Alkatra", cursive;
 }
 
-.higher-lower-game-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  gap: 40rem;
-  margin-top: 10rem;
-}
-
+/* 
 .play-again-higher-lower {
   height: 90vh;
   width: 175vh;
@@ -43,10 +37,7 @@
   color: #fff;
 }
 
-.higher-lower-back-image {
-  height: 100%;
-  z-index: 0;
-}
+
 
 .higher-player {
   position: relative;
@@ -97,17 +88,22 @@
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+} */
+
+.higher-lower-back-image {
+  height: 100%;
 }
 
 .arrow-container {
+  height: 60%;
   position: absolute;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  transform: translate(0, -5%);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  backdrop-filter: blur(5px);
+  background-color: rgba(0, 115, 198, 0.552);
   border: solid rgba(0, 115, 198, 0.6);
   padding: 1rem;
 }
@@ -116,9 +112,214 @@
   margin: auto;
   text-align: center;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  user-select: none;
 }
 
-.arrow-container>* {
+.arrow-container > * {
   color: #fff;
+  box-shadow: 5px 5px 10px black;
+  z-index: 2;
   font-size: 6rem;
+  border-radius: 50%;
+}
+.arrow-container h2 {
+  margin: auto;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 0px black;
+  border-radius: 0;
+}
+
+.higher-lower-players-field {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10px;
+
+  display: flex;
+  overflow: hidden;
+  justify-content: space-around;
+  border: solid rgba(0, 115, 198, 0.6);
+  height: 70rem;
+  align-items: center;
+}
+
+.player-field {
+  position: relative;
+
+  width: 30vw;
+  height: 100%;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+.right-side-player-field {
+  transition: 1s;
+}
+
+.line-down-middle {
+  position: absolute;
+  left: 50%;
+
+  height: 20%;
+  transform: translateX(-50%);
+
+  background-color: #eee;
+  width: 1rem;
+}
+
+.line-up {
+  top: 0;
+}
+
+.line-down {
+  bottom: 0;
+}
+
+.higher-lower-player-info-box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  background-color: rgba(0, 0, 0, 0.308);
+}
+
+.hidden-player-3 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.player-slide-one {
+  animation: slideLeft1 1s;
+}
+
+.player-slide-two {
+  animation: slideLeft2 1s;
+}
+
+.player-rise {
+  animation: slideUp 1s;
+}
+
+@keyframes slideUp {
+  0% {
+  }
+  40% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideLeft1 {
+  0% {
+  }
+  40% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideLeft2 {
+  0% {
+  }
+  40% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.higher-lower-player-info {
+  font-size: 3rem;
+  color: rgb(219, 219, 219);
+  text-shadow: 2px 2px 1px black;
+}
+
+.higher-lower-player-name {
+  font-size: 5rem;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.higher-lower-lost-game-screen {
+  width: 70rem;
+  font-family: "Marcellus";
+  height: 50rem;
+  font-size: 4rem;
+  color: rgb(160, 160, 160);
+  text-shadow: 2px 2px 2px black;
+  z-index: 1;
+  border-radius: 20px;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(0, 115, 198, 0.6);
+}
+
+.higher-lower-lost-game-screen > h2:nth-child(even) {
+  color: #efefef;
+}
+
+.higher-lower-play-again {
+  color: #efefef;
+}
+
+.fade-screen-out {
+  animation: fadeOut 0.5s;
+}
+
+.fade-screen-in {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeOut {
+  0% {
+  }
+  100% {
+    scale: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.red-screen {
+  animation: redScreen 0.5s;
+}
+
+@keyframes redScreen {
+  25% {
+    background-color: rgba(255, 0, 0, 0.429);
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.89);
+  }
+  75% {
+    background-color: rgba(255, 0, 0, 0.429);
+  }
 }

@@ -11,16 +11,17 @@ const client = new MongoClient(
 const clientPromise = client.connect();
 
 async function getHigherLowerPlayer() {
+  console.log("JOB");
   const mongoClient = await clientPromise;
   const count = await mongoClient
     .db("guesscareer2")
-    .collection("guesscareer")
+    .collection("guesscareerimg")
     .countDocuments();
 
   const randomIndex = Math.floor(Math.random() * count);
   const randomDocument = await mongoClient
     .db("guesscareer2")
-    .collection("guesscareer")
+    .collection("guesscareerimg")
     .find()
     .skip(randomIndex)
     .limit(1)

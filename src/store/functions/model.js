@@ -3,7 +3,7 @@ import { setInitIntro } from "../redux/video";
 import { RESET_GUESS_ELEVEN } from "../../store/redux/guessEleven";
 
 const createNewRound = function async(dispatch) {
-  return fetch("https://twire-backend.onrender.com/sendtofrontend")
+  return fetch("https://twire-backend-deployment.onrender.com/sendtofrontend")
     .then((response) => response.json())
     .then((data) => {
       dispatch(RESET_GUESS_ELEVEN());

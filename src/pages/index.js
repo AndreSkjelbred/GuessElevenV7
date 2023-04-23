@@ -1,15 +1,16 @@
 import { useState, useEffect, Fragment } from "react";
 
+import Head from "next/head";
+
 import Confetti from "@/components/home/confetti/confetti.component";
 import HomeNavbar from "../components/home/homeNavbar/homeNavbar.component";
 import HomeGameNav from "@/components/home/homeGameNav/homeGameNav.component";
 import GameReviews from "@/components/home/gameReviews/gameReviews.component";
 import LoadingScreen from "@/screens/loadingScreen/loadingScreen.component";
-import { useSelector } from "react-redux";
 
-import Head from "next/head";
+
 import * as url from "./homePageMain.jpg";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { RESET_VIDEO } from "@/store/redux/video";
 import { toggleGameActive } from "@/store/redux/guessEleven";
 import LoginForm from "@/components/home/loginForm/loginForm.component";
