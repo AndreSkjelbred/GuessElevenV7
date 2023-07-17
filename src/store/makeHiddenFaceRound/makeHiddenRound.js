@@ -8,7 +8,6 @@ const createHiddenRound = async (dispatch) => {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
       dispatch(createHiddenPlayerData(data));
     });
 };

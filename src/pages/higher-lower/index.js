@@ -18,19 +18,19 @@ function HigherLower() {
   const mainScreen = useRef(null);
   const lostScreen = useRef(null);
 
+  const [guessing, setGuessing] = useState(false);
   const [lost, setLost] = useState(false);
   const [score, setScore] = useState(0);
 
   const dispatch = useDispatch();
   useEffect(() => {
     createHigherLowerRound(dispatch, 3);
-    console.log("init");
   }, []);
 
   const { higherPlayerData1 } = useSelector((state) => state.higher);
   const { higherPlayerData2 } = useSelector((state) => state.higher);
   const { higherPlayerData3 } = useSelector((state) => state.higher);
-  console.log(higherPlayerData1);
+
   function restartGame() {
     setScore(0);
     setLost(false);
@@ -38,12 +38,12 @@ function HigherLower() {
   }
 
   function fadeScreen() {
-    guessPlayerBackground.current.classList.add("red-screen");
+    guessPlayerBackground.current.classList?.add("red-screen");
     setTimeout(() => {
-      guessPlayerBackground.current.classList.remove("red-screen");
-      mainScreen.current.classList.add("fade-screen-out");
+      guessPlayerBackground.current?.classList.remove("red-screen");
+      mainScreen.current?.classList.add("fade-screen-out");
       setTimeout(() => {
-        mainScreen.current.classList.remove("fade-screen-out");
+        mainScreen.current?.classList.remove("fade-screen-out");
         setLost(true);
       }, 500);
     }, 500);
@@ -67,6 +67,12 @@ function HigherLower() {
   }
 
   function guessHandler(guess) {
+    if (guessing) return;
+    setGuessing(true);
+
+    setTimeout(() => {
+      setGuessing(false);
+    }, 1000);
     if (guess === 2) {
       if (higherPlayerData2.marketValue <= higherPlayerData1.marketValue) {
         slidePlayers();

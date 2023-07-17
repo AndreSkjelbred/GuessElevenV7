@@ -10,11 +10,9 @@ const createHigherLowerRound = async (
   playerData2,
   playerData3
 ) => {
-  console.log(amount);
   if (amount === 3) {
     await fetch("/api/higher-lower")
       .then((res) => {
-        console.log("HI");
         return res.json();
       })
       .then((data) => {

@@ -11,7 +11,6 @@ const client = new MongoClient(
 const clientPromise = client.connect();
 
 async function getHigherLowerPlayer() {
-  console.log("JOB");
   const mongoClient = await clientPromise;
   const count = await mongoClient
     .db("guesscareer2")

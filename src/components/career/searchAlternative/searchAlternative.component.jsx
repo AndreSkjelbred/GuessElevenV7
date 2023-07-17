@@ -4,7 +4,6 @@ function SearchAlternative({ player, onClick }) {
   function handleGuess() {
     onClick(player);
   }
-  console.log(player);
 
   return (
     <div

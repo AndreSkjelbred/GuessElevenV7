@@ -9,7 +9,7 @@ import "../components/home/homeNavbar/homeNavbar.styles.css";
 import "../components/howToPlay/htpCircle/htpCircle.styles.css";
 import "../components/modal/foundLetters/foundLetters.styles.css";
 import "../components/modal/gameInfoModal/gameInfoModal.styles.css";
-
+import "../components/generalGameComponents/guessedPlayersTwoRows/guessedPlayersTwoRows.styles.css";
 import "../components/modal/modalGuess/modalGuess.styles.css";
 import "../components/modal/modalSpace/modalSpace.styles.css";
 import "../components/no_modal/formation/formation.styles.css";
@@ -29,10 +29,9 @@ import "../screens/blurScreen/blurScreen.styles.css";
 import "../components/home/loginForm/loginForm.styles.css";
 import "./hidden-player/hidden-face.styles.css";
 import "../pages/higher-lower/higher-lower.styles.css";
-import "../pages/contact-us/contact-us.styles.css"
-import "../pages/info/info.styles.css"
-
-
+import "../pages/contact-us/contact-us.styles.css";
+import "../pages/info/info.styles.css";
+import "../components/generalGameComponents/guessedProfileImage/guessedProfileImage.styles.css";
 
 import Head from "next/head";
 import Script from "next/script";
@@ -76,7 +75,7 @@ export default function App({ Component, pageProps }) {
           crossorigin='anonymous'
         ></script>
       </Head>
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
+
       <Script
         strategy='afterInteractive'
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}

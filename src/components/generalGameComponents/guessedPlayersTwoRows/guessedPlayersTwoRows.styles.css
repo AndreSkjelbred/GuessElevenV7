@@ -1,0 +1,31 @@
+.guessed-players-two-columns-container {
+  display: flex;
+
+  margin-top: 5rem;
+  height: fit-content;
+  width: fit-content;
+  gap: 1rem;
+  z-index: 0;
+}
+
+.guessed-players-column {
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.line-seperate-columns {
+  background-color: #dddcdc;
+  width: 1rem;
+  border-radius: 10px;
+}
+
+.spread-column-right {
+  transition: 0.5s;
+  transform: translateX(50%);
+}
+.spread-column-left {
+  transition: 0.5s;
+  transform: translateX(-50%);
+}

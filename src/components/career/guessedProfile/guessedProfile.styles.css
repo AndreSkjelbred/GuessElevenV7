@@ -14,12 +14,12 @@
 }
 
 .guessed-profile-container {
-  width: 50vw;
+  width: 55vw;
   padding: 0 5vw;
   height: 20rem;
   background-color: rgba(51, 125, 221, 0.644);
   box-shadow: 1px 1px 10px white;
-
+  transition: 1s;
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@
 @media only screen and (min-width: 720px) {
   .guessed-profile-container {
     height: 12rem;
-    width: 35vw;
+
     padding: 0 2vw;
   }
 }
@@ -75,7 +75,8 @@
 }
 
 .profile-img-container {
-  background-color: rgb(168, 162, 162);
+  background-color: rgba(14, 108, 230, 1);
+
   aspect-ratio: 1/1;
   height: 90%;
   border-radius: 100%;

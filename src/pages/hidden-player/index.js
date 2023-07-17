@@ -1,13 +1,17 @@
 import Image from "next/image";
 import HomeNavbar from "@/components/home/homeNavbar/homeNavbar.component";
 import createHiddenRound from "@/store/makeHiddenFaceRound/makeHiddenRound";
-import { incrementHiddenGuessCount } from "@/store/redux/hidden";
+import {
+  incrementHiddenGuessCount,
+  incrementHiddenScore,
+} from "@/store/redux/hidden";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import * as Realm from "realm-web";
 import SearchAlternative from "@/components/career/searchAlternative/searchAlternative.component";
-import GuessedProfile from "@/components/career/guessedProfile/guessedProfile";
+import { setSearchOpen } from "@/store/redux/hidden";
+import GuessedPlayersTwoColumns from "@/components/generalGameComponents/guessedPlayersTwoRows/guessedPlayersTwoRows.component";
 
 function HiddenPlayer() {
   const [won, setWon] = useState(false);
@@ -21,6 +25,15 @@ function HiddenPlayer() {
   useEffect(() => {
     createHiddenRound(dispatch);
   }, []);
+  let highScore = 0;
+  useEffect(() => {
+    highScore =
+      localStorage.getItem("hidden-highscore") !== null
+        ? localStorage.getItem("hidden-highscore")
+        : 0;
+  }, []);
+
+  const { score } = useSelector((state) => state.hidden);
 
   const { hiddenPlayerData } = useSelector((state) => state.hidden);
 
@@ -29,21 +42,38 @@ function HiddenPlayer() {
 
     setGuessedPlayers([
       ...guessedPlayers,
-      {
-        leagueClass:
-          player.league === hiddenPlayerData.league ? "correct-data" : "",
-        clubClass: player.club === hiddenPlayerData.club ? "correct-data" : "",
-        playerClass:
-          player.name === hiddenPlayerData.name ? "correct-data" : "",
-        leagueImg: player.leagueImg,
-        clubImg: player.clubImg,
-        imgSrc: player.imgSrc,
-      },
+      [
+        {
+          imgSrc: player.imgSrc,
+          className:
+            player.name === hiddenPlayerData.name ? "correct-data" : "",
+        },
+        {
+          imgSrc: player.leagueImg,
+          className:
+            player.league === hiddenPlayerData.league ? "correct-data" : "",
+        },
+        {
+          imgSrc: player.clubImg,
+          className:
+            player.club === hiddenPlayerData.club ? "correct-data" : "",
+        },
+        {
+          imgSrc: player.pos,
+          className: player.pos === hiddenPlayerData.pos ? "correct-data" : "",
+          realValue: hiddenPlayerData.pos,
+        },
+        {
+          imgSrc: player.age,
+          className: player.age === hiddenPlayerData.age ? "correct-data" : "",
+          realValue: hiddenPlayerData.age,
+        },
+      ],
     ]);
 
     if (player.name === hiddenPlayerData.name) {
       setWon(true);
-      dispatch(incrementHiddenGuessCount(100));
+      dispatch(incrementHiddenScore());
     }
     if (guessCount + 1 === hiddenPlayerData.teamsTotal) {
       setAlive(false);
@@ -55,8 +85,6 @@ function HiddenPlayer() {
     input.focus();
   }
 
-  console.log(guessedPlayers);
-
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
 
@@ -66,6 +94,7 @@ function HiddenPlayer() {
   useEffect(() => {
     if (searchFieldValue.length <= 2) {
       setFilteredPlayers([]);
+      dispatch(setSearchOpen(false));
       return;
     }
 
@@ -80,6 +109,7 @@ function HiddenPlayer() {
         })
         .then((newFilteredPlayers) => {
           setFilteredPlayers(newFilteredPlayers);
+          newFilteredPlayers.length > 0 && dispatch(setSearchOpen(true));
         });
     } catch (err) {
       console.error(err);
@@ -93,29 +123,45 @@ function HiddenPlayer() {
       <div className='hidden-player-back-image'>
         <Image fill src='/hiddenplayer.jpeg' />
       </div>
-      <HomeNavbar />
-      <div className='player-img-container img blur-img'>
-        <Image
-          alt='hidden-player'
-          fill
-          src={hiddenPlayerData.imgSrc}
-          quality={won ? 100 : 1}
-        />
-      </div>
+      <div className='score-image-highscore-container'>
+        <div className='current-score-container-hidden'>
+          <h3>Current Streak:</h3>
+          <h3>{score}</h3>
+        </div>
 
+        <div className='player-img-container img blur-img'>
+          <Image
+            alt='hidden-player'
+            fill
+            src={hiddenPlayerData.imgSrc}
+            quality={won ? 100 : 1}
+          />
+        </div>
+        <div className='current-score-container-hidden'>
+          <h3>Highest Streak:</h3>
+          <h3>{highScore}</h3>
+        </div>
+      </div>
+      <HomeNavbar />
       <div className='search-area-container'>
         <div className='career-input-container'>
           <input onChange={onSearchChange} className='input-career' />
         </div>
-        {filteredPlayers.map((player) => (
-          <SearchAlternative onClick={guessHandler} player={player} />
-        ))}
-        {guessedPlayers.map((player) => {
-          return <GuessedProfile player={player} />;
-        })}
+        <div className='filtered-players-container-hidden'>
+          {filteredPlayers.map((player) => (
+            <SearchAlternative onClick={guessHandler} player={player} />
+          ))}
+        </div>
       </div>
+      <GuessedPlayersTwoColumns guessedPlayers={guessedPlayers} />
     </div>
   );
 }
 
 export default HiddenPlayer;
+
+3 / 2;
+8 / 2;
+7 / 3;
+21 / 3;
+18 / 1;
