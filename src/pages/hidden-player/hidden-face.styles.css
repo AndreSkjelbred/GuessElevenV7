@@ -47,7 +47,7 @@
   box-shadow: 10px 10px 1px black;
 }
 
-.career-input-container input {
+/* .career-input-container input {
   margin-top: -25px;
   border-radius: 10px;
   width: 40%;
@@ -57,7 +57,7 @@
   font-size: 2rem;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   font-family: "Alkatra", cursive;
-}
+} */
 
 .filtered-players-container-hidden {
   position: absolute;

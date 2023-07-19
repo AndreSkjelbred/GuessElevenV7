@@ -17,9 +17,10 @@
   width: 55vw;
   padding: 0 5vw;
   height: 20rem;
-  background-color: rgba(51, 125, 221, 0.644);
-  box-shadow: 1px 1px 10px white;
-  transition: 1s;
+  /* background-color: rgba(51, 125, 221, 0.644); */
+  background-color: #0a0019;
+  box-shadow: 1px 1px 10px #000;
+  transition: all 1s;
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -68,14 +69,15 @@
 
 @media only screen and (min-width: 1400px) {
   .guessed-profile-container {
-    height: 7rem;
+    height: 8rem;
     width: 20vw;
     padding: 0 1vw;
   }
 }
 
 .profile-img-container {
-  background-color: rgba(14, 108, 230, 1);
+  /* background-color: rgba(14, 108, 230, 1); */
+  background-color: #a366ff;
 
   aspect-ratio: 1/1;
   height: 90%;

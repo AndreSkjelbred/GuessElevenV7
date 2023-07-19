@@ -3,11 +3,11 @@
   flex-direction: column;
   gap: 3rem;
   color: aliceblue;
-  color: black;
-  font-size: 1.6rem;
+
+  font-size: 1.2rem;
 }
 
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
   .career-detail-box {
     font-size: 1.3rem;
   }
@@ -29,18 +29,19 @@
   .career-detail-box {
     font-size: 0.7rem;
   }
-}
+} */
 
 .career-detail-title {
   color: rgb(192, 192, 192);
 }
 
 .career-detail-infoindex {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: white;
+  text-transform: uppercase;
 }
 
-@media only screen and (min-width: 720px) {
+/* @media only screen and (min-width: 720px) {
   .career-detail-infoindex {
     font-size: 1.5rem;
   }
@@ -50,4 +51,4 @@
   .career-detail-infoindex {
     font-size: 1rem;
   }
-}
+} */
