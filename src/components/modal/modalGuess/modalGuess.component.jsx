@@ -187,7 +187,7 @@ function ModalGuess() {
 
       if (deepEqual(correctGuessed, correctAnswer)) {
         dispatch(addGuessedPlayer(number));
-        
+
         dispatch(setModalOpen());
 
         return;

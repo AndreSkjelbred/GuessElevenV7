@@ -10,7 +10,8 @@ import GuessedProfile from "@/components/career/guessedProfile/guessedProfile";
 import HomeNavbar from "@/components/home/homeNavbar/homeNavbar.component";
 import { FaSync, FaInfoCircle } from "react-icons/fa";
 import createCareerRound from "@/store/makeCareerRound/model";
-
+import GuessedPlayersTwoColumns from "@/components/generalGameComponents/guessedPlayersTwoRows/guessedPlayersTwoRows.component";
+import Sidebar from "@/components/generalGameComponents/sidebar/sidebar.component";
 
 function Career() {
   const [loadingNewGame, setLoadingNewGame] = useState(false);
@@ -35,7 +36,7 @@ function Career() {
   const data = useSelector((state) => state.career.playerData);
 
   const [searchFieldValue, setSearchField] = useState("");
- 
+
   const [filteredPlayers, setFilteredPlayers] = useState([]);
   const [guessedPlayers, setGuessedPlayers] = useState([]);
 
@@ -111,17 +112,21 @@ function Career() {
   return (
     <Fragment>
       <Head>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script
           async
-          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8136917730232216'
-          crossorigin='anonymous'
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8136917730232216"
+          crossorigin="anonymous"
         ></script>
       </Head>
-      <div className='career-page'>
+      <div className="career-page">
         <HomeNavbar />
-        <FaSync onClick={makeNewRound} className='new-game-icon' />
-        <div className='club-info-container'>
+        <Sidebar />
+        <FaSync
+          onClick={makeNewRound}
+          className="new-game-icon new-game-career"
+        />
+        <div className="club-info-container">
           {!teamsAmount.length && <BlurScreen />}
           <CareerClub
             data={{
@@ -151,18 +156,18 @@ function Career() {
               );
             })}
         </div>
-        <div className='search-area-container'>
+        <div className="search-area-container">
           {alive && !won && teamsAmount.length && (
-            <div className='career-input-container'>
+            <div className="career-input-container">
               <input
                 onChange={onSearchChange}
                 placeholder={`${guessCount} of ${data[0].teamsTotal} guesses made`}
-                className='input-career'
+                className="input-career"
               />
             </div>
           )}
-          {searchFieldValue.length && filteredPlayers?.length && (
-            <div className='player-options-container'>
+          {searchFieldValue.length > 0 && filteredPlayers?.length > 0 && (
+            <div className="player-options-container">
               {filteredPlayers.map((it) => {
                 return (
                   <SearchAlternative
@@ -174,11 +179,7 @@ function Career() {
               })}
             </div>
           )}
-          <div className='guessed-players-container-box'>
-            {guessedPlayers.map((player) => {
-              return <GuessedProfile key={player.name} player={player} />;
-            })}
-          </div>
+          <GuessedPlayersTwoColumns guessedPlayers={guessedPlayers} />
         </div>
         )
       </div>

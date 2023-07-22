@@ -34,8 +34,10 @@ function Formation() {
                 key={gkArr.name}
                 pos='GK'
                 index={cardIndexes[1]}
-                known={guessedPlayers.includes(gkArr.number)}
+                known={guessedPlayers.includes(gkArr.player_number)}
                 {...gkArr}
+                number={gkArr.player_number}
+                photo={gkArr.image_url}
               />
             );
           })}
@@ -48,9 +50,11 @@ function Formation() {
                 key={defArr.name}
                 pos='DEF'
                 index={cardIndexes[startIndex]}
-                known={guessedPlayers.includes(defArr.number)}
+                known={guessedPlayers.includes(defArr.player_number)}
                 name={defArr.name}
+                number={defArr.player_number}
                 {...defArr}
+                photo={defArr.image_url}
               />
             );
           })}
@@ -64,8 +68,10 @@ function Formation() {
                 key={midArr.name}
                 pos='MID'
                 index={cardIndexes[startIndex]}
-                known={guessedPlayers.includes(midArr.number)}
+                known={guessedPlayers.includes(midArr.player_number)}
                 {...midArr}
+                number={midArr.player_number}
+                photo={midArr.image_url}
               />
             );
           })}
@@ -78,8 +84,10 @@ function Formation() {
                 key={forArr.name}
                 pos='FOR'
                 index={cardIndexes[startIndex]}
-                known={guessedPlayers.includes(forArr.number)}
+                known={guessedPlayers.includes(forArr.player_number)}
                 {...forArr}
+                number={forArr.player_number}
+                photo={forArr.image_url}
               />
             );
           })}

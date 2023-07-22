@@ -12,6 +12,8 @@ import * as Realm from "realm-web";
 import SearchAlternative from "@/components/career/searchAlternative/searchAlternative.component";
 import { setSearchOpen } from "@/store/redux/hidden";
 import GuessedPlayersTwoColumns from "@/components/generalGameComponents/guessedPlayersTwoRows/guessedPlayersTwoRows.component";
+import Sidebar from "@/components/generalGameComponents/sidebar/sidebar.component";
+import { Fragment } from "react";
 
 function HiddenPlayer() {
   const [won, setWon] = useState(false);
@@ -119,42 +121,43 @@ function HiddenPlayer() {
   const { guessCount } = useSelector((state) => state.hidden);
 
   return (
-    <div className='hidden-face-root-container'>
-      <div className='hidden-player-back-image'>
-        <Image fill src='/hiddenplayer.jpeg' />
-      </div>
-      <div className='score-image-highscore-container'>
-        <div className='current-score-container-hidden'>
-          <h3>Current Streak:</h3>
-          <h3>{score}</h3>
-        </div>
+    <Fragment>
+      <Sidebar />
+      <div className="hidden-face-root-container">
+        <div className="score-image-highscore-container">
+          <div className="current-score-container-hidden">
+            <h3>Current Streak:</h3>
+            <h3>{score}</h3>
+          </div>
 
-        <div className='player-img-container img blur-img'>
-          <Image
-            alt='hidden-player'
-            fill
-            src={hiddenPlayerData.imgSrc}
-            quality={won ? 100 : 1}
-          />
+          <div className="player-img-container img blur-img">
+            <Image
+              alt="hidden-player"
+              fill
+              src={hiddenPlayerData.imgSrc}
+              quality={won ? 100 : 1}
+            />
+          </div>
+          <div className="current-score-container-hidden">
+            <h3>Highest Streak:</h3>
+            <h3>{highScore}</h3>
+          </div>
         </div>
-        <div className='current-score-container-hidden'>
-          <h3>Highest Streak:</h3>
-          <h3>{highScore}</h3>
+        <HomeNavbar />
+
+        <div className="search-area-container">
+          <div className="career-input-container">
+            <input onChange={onSearchChange} className="input-career" />
+          </div>
+          <div className="filtered-players-container-hidden">
+            {filteredPlayers.map((player) => (
+              <SearchAlternative onClick={guessHandler} player={player} />
+            ))}
+          </div>
         </div>
-      </div>
-      <HomeNavbar />
-      <div className='search-area-container'>
-        <div className='career-input-container'>
-          <input onChange={onSearchChange} className='input-career' />
-        </div>
-        <div className='filtered-players-container-hidden'>
-          {filteredPlayers.map((player) => (
-            <SearchAlternative onClick={guessHandler} player={player} />
-          ))}
-        </div>
-      </div>
-      <GuessedPlayersTwoColumns guessedPlayers={guessedPlayers} />
-    </div>
+        <GuessedPlayersTwoColumns guessedPlayers={guessedPlayers} />
+      </div>{" "}
+    </Fragment>
   );
 }
 

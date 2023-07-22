@@ -23,13 +23,13 @@ function HomeGameNav() {
   }
 
   return (
-    <div className='home-game-navigation'>
-      <div className='home-game-container'>
-        <div className='games-link-container'>
-          <div className='nav-column-item-container'>
+    <div className="home-game-navigation">
+      <div className="home-game-container">
+        <div className="games-link-container">
+          <div className="nav-column-item-container">
             <h2>GUESS ELEVEN</h2>
 
-            <Link className='video-play-button' href='/guess-eleven'>
+            <Link className="video-play-button" href="/guess-eleven">
               <span></span>
             </Link>
           </div>
@@ -37,14 +37,24 @@ function HomeGameNav() {
             {guessElevenText}
           </ReadMore>
         </div>
-        <div className='games-link-container'>
-          <div className='nav-column-item-container'>
+        <div className="games-link-container">
+          <div className="nav-column-item-container">
+            <h2>Higher or Lower</h2>
+
+            <Link className="video-play-button" href="/higher-lower">
+              <span></span>
+            </Link>
+          </div>
+          <ReadMore></ReadMore>
+        </div>
+        <div className="games-link-container">
+          <div className="nav-column-item-container">
             <h2>CAREER PATH</h2>
 
             <Link
               onClick={loadScreen}
-              className='video-play-button'
-              href='/career-path'
+              className="video-play-button"
+              href="/career-path"
             >
               <span></span>
             </Link>
@@ -53,14 +63,14 @@ function HomeGameNav() {
             {careerPathText}
           </ReadMore>
         </div>
-        <div className='games-link-container'>
-          <div className='nav-column-item-container'>
+        <div className="games-link-container">
+          <div className="nav-column-item-container">
             <h2>BLURRED PLAYER</h2>
 
             <Link
               onClick={loadScreen}
-              className='video-play-button'
-              href='/hidden-player'
+              className="video-play-button"
+              href="/hidden-player"
             >
               <span></span>
             </Link>
@@ -71,9 +81,9 @@ function HomeGameNav() {
         </div>
       </div>
 
-      <div className='social-media-container'>
-        <FaTiktok className='social-logo  hide-icon-title' />
-        <FaTwitter className='social-logo twitter hide-icon-title' />
+      <div className="social-media-container">
+        <FaTiktok className="social-logo  hide-icon-title" />
+        <FaTwitter className="social-logo twitter hide-icon-title" />
       </div>
     </div>
   );

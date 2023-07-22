@@ -7,8 +7,6 @@ html {
   font-size: 10px;
 
   background-color: white;
-
-  overflow: hidden;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -72,14 +70,18 @@ code {
   position: relative;
   height: 100vh;
   flex-grow: 1;
-  background-image: linear-gradient(to top right,
+  background-image: linear-gradient(
+      to top right,
       rgba(0, 0, 0, 0.858),
       rgba(255, 255, 255, 0),
-      rgba(0, 0, 0, 0.81)),
-    linear-gradient(to bottom right,
+      rgba(0, 0, 0, 0.81)
+    ),
+    linear-gradient(
+      to bottom right,
       rgba(0, 0, 0, 0.808),
       rgba(255, 255, 255, 0),
-      rgba(0, 0, 0, 0.918));
+      rgba(0, 0, 0, 0.918)
+    );
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -96,15 +98,15 @@ code {
 }
 
 .home-title {
-  width: 70%;
+  max-width: max-content;
   position: absolute;
   top: 50%;
   left: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
   font-size: 9rem;
-  color: #3A78F9;
-  color: #3A78F9;
+  color: #3a78f9;
+  color: #3a78f9;
   letter-spacing: 0.6rem;
   font-family: "Bebas Neue";
   text-shadow: 0.2rem 0.3rem 0.3rem white;

@@ -41,6 +41,7 @@ const guessElevenSlice = createSlice({
     },
     setCurrentPlayer: (state, action) => {
       const { payload } = action;
+
       state.currentPlayer = payload;
     },
     setGuessedData: (state, action) => {

@@ -9,6 +9,7 @@ import {
   FaSync,
 } from "react-icons/fa";
 import { useState } from "react";
+import Sidebar from "@/components/generalGameComponents/sidebar/sidebar.component";
 
 function HigherLower() {
   const firstPlayer = useRef(null);
@@ -89,84 +90,85 @@ function HigherLower() {
   }
 
   return (
-    <div className='higher-lower-page-container'>
+    <div className="higher-lower-page-container">
       <HomeNavbar />
-      <div className=' higher-lower-back-image'>
-        <Image fill src='/higherlower.jpeg' />
+      <Sidebar />
+      <div className=" higher-lower-back-image">
+        <Image fill src="/higherlower.jpeg" />
       </div>{" "}
       {!lost ? (
-        <div ref={mainScreen} className='higher-lower-players-field'>
+        <div ref={mainScreen} className="higher-lower-players-field">
           <div
             ref={firstPlayer}
-            className='left-side-player-field player-field'
+            className="left-side-player-field player-field"
           >
-            <Image alt='left-player' src={higherPlayerData1.goodImage} fill />
-            <div className='higher-lower-player-info-box'>
-              <h2 className='higher-lower-player-name higher-lower-player-info'>
+            <Image alt="left-player" src={higherPlayerData1.goodImage} fill />
+            <div className="higher-lower-player-info-box">
+              <h2 className="higher-lower-player-name higher-lower-player-info">
                 {higherPlayerData1.name}
               </h2>
-              <h2 className='higher-lower-player-info'>
+              <h2 className="higher-lower-player-info">
                 {higherPlayerData1.club}
               </h2>
-              <h2 className='higher-lower-player-info'>
+              <h2 className="higher-lower-player-info">
                 {higherPlayerData1?.marketValue?.toLocaleString("en-US")}
               </h2>
             </div>
           </div>
-          <div className='line-down-middle line-up'></div>
-          <div className='arrow-container'>
+          <div className="line-down-middle line-up"></div>
+          <div className="arrow-container">
             <h2>{score}</h2>
             <FaArrowAltCircleUp
-              className=' info-btn-icon'
+              className=" info-btn-icon"
               onClick={() => guessHandler(1)}
             />
             <FaArrowAltCircleDown
-              className=' info-btn-icon'
+              className=" info-btn-icon"
               onClick={() => guessHandler(2)}
             />
           </div>
-          <div className='line-down-middle line-down'></div>
+          <div className="line-down-middle line-down"></div>
 
           <div
             ref={secondPlayer}
-            className='right-side-player-field player-field'
+            className="right-side-player-field player-field"
           >
             <Image
-              alt='higher-lower-player'
+              alt="higher-lower-player"
               src={higherPlayerData2.goodImage}
               fill
             />
             <div
               ref={guessPlayerBackground}
-              className='higher-lower-player-info-box'
+              className="higher-lower-player-info-box"
             >
-              <h2 className='higher-lower-player-name higher-lower-player-info'>
+              <h2 className="higher-lower-player-name higher-lower-player-info">
                 {higherPlayerData2.name}
               </h2>
             </div>
           </div>
 
-          <div ref={thirdPlayer} className='hidden-player-3 player-field'>
+          <div ref={thirdPlayer} className="hidden-player-3 player-field">
             <Image
-              alt='higher-lower-player'
+              alt="higher-lower-player"
               src={higherPlayerData3.goodImage}
               fill
             />
-            <div className='higher-lower-player-info-box'>
-              <h2 className='higher-lower-player-name higher-lower-player-info'>
+            <div className="higher-lower-player-info-box">
+              <h2 className="higher-lower-player-name higher-lower-player-info">
                 {higherPlayerData3.name}
               </h2>
             </div>
           </div>
         </div>
       ) : (
-        <div className='higher-lower-lost-game-screen' ref={lostScreen}>
+        <div className="higher-lower-lost-game-screen" ref={lostScreen}>
           <h2>Total Score:</h2>
           <h2>{score}</h2>
           <h2>Highscore:</h2>
           <h2>{score}</h2>
           <h2>Play Again?</h2>
-          <FaSync className='higher-lower-play-again' onClick={restartGame} />
+          <FaSync className="higher-lower-play-again" onClick={restartGame} />
         </div>
       )}
     </div>
