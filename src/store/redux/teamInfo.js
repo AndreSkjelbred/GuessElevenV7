@@ -6,7 +6,10 @@ const teamInfoSlice = createSlice({
     teamLogo: "",
     teamName: "",
     gameDate: "",
-    startingXI: {},
+    G: [],
+    D: [],
+    M: [],
+    F: [],
     league: "",
     stadium: "",
     opponent: "",
@@ -25,23 +28,26 @@ const teamInfoSlice = createSlice({
         return;
       }
 
-      state.startingXI = data.startxi;
+      state.G = data.info.G;
+      state.D = data.info.D;
+      state.M = data.info.M;
+      state.F = data.info.F;
 
-      state.teamLogo = data.logo;
+      state.teamLogo = data.info.team.logo;
 
-      state.opponent = data.opponent[0].name;
+      state.opponent = data.info.opponent.name;
 
-      state.opponentLogo = data.opponent[0].logo;
+      state.opponentLogo = data.info.opponent.logo;
 
-      state.stadium = data.stadium;
+      state.stadium = data.info.stadium;
 
-      state.league = data.league;
+      state.league = data.info.cup;
 
-      state.teamName = data.team[0].name;
+      state.teamName = data.info.team.name;
 
-      state.home = data.team[0].side;
+      state.home = data.info.team.side;
 
-      state.gameDate = data.date;
+      state.gameDate = data.info.date;
 
       return;
     },

@@ -18,9 +18,7 @@ const cardIndexes = {
 
 function Formation() {
   let startIndex = 1;
-  const startingXI = useSelector((state) => state.teamInfo.startingXI);
-
-  const { G, D, M, F } = startingXI;
+  const { G, D, M, F } = useSelector((state) => state.teamInfo);
 
   const guessedPlayers = useSelector(
     (state) => state.guessEleven.guessedPlayers
@@ -51,6 +49,7 @@ function Formation() {
                 pos='DEF'
                 index={cardIndexes[startIndex]}
                 known={guessedPlayers.includes(defArr.number)}
+                name={defArr.name}
                 {...defArr}
               />
             );
