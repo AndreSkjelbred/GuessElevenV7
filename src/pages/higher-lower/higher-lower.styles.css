@@ -179,11 +179,12 @@
 
 .higher-lower-lost-game-screen {
   width: 70rem;
-  font-family: "Marcellus";
+  font-family: "Poppins";
+  text-transform: uppercase;
   height: 50rem;
   font-size: 4rem;
   color: rgb(160, 160, 160);
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 0 black;
   z-index: 1;
   border-radius: 20px;
   display: flex;

@@ -3,8 +3,8 @@
   height: 10rem;
   width: 100%;
   justify-content: space-between;
-  /* background-color: #3a78f9; */
-  background-image: linear-gradient(to right, #0a0019, #5c00e6);
+  background-color: #3a78f9;
+
   border-radius: 3px;
   padding: 0 2rem;
   align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .search-alternative:hover {
-  background-image: linear-gradient(to right, #6600ff, #a366ff);
+  background-image: linear-gradient(to right, #0b0563, #2447e7);
   scale: 1.2;
 }
 

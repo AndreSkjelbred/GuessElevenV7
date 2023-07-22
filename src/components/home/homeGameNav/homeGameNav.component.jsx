@@ -39,7 +39,7 @@ function HomeGameNav() {
         </div>
         <div className="games-link-container">
           <div className="nav-column-item-container">
-            <h2>Higher or Lower</h2>
+            <h2>HIGHER OR LOWER</h2>
 
             <Link className="video-play-button" href="/higher-lower">
               <span></span>
