@@ -157,3 +157,9 @@ input:focus {
   margin-bottom: 10rem;
   gap: 4rem;
 }
+
+.new-game-career {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}

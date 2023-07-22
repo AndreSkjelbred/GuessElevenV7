@@ -8,6 +8,12 @@
   z-index: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  .guessed-players-two-columns-container {
+    flex-direction: column;
+  }
+}
+
 .guessed-players-column {
   transition: 0.5s;
   display: flex;
@@ -16,7 +22,7 @@
 }
 
 .line-seperate-columns {
-  background-color: #dddcdc;
+  background-color: #e0ccff;
   width: 1rem;
   border-radius: 10px;
 }

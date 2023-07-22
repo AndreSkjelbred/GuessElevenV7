@@ -32,6 +32,7 @@ import "../pages/higher-lower/higher-lower.styles.css";
 import "../pages/contact-us/contact-us.styles.css";
 import "../pages/info/info.styles.css";
 import "../components/generalGameComponents/guessedProfileImage/guessedProfileImage.styles.css";
+import "../components/generalGameComponents/sidebar/sidebar.styles.css";
 
 import Head from "next/head";
 import Script from "next/script";
@@ -71,13 +72,13 @@ export default function App({ Component, pageProps }) {
         />
         <script
           async
-          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8136917730232216'
-          crossorigin='anonymous'
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8136917730232216"
+          crossorigin="anonymous"
         ></script>
       </Head>
 
       <Script
-        strategy='afterInteractive'
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
       <Component {...pageProps} />

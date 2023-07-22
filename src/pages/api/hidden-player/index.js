@@ -1,8 +1,9 @@
 import { MongoClient } from "mongodb";
 const express = require("express");
+const bodyParser = require("body-parser");
 const mongoOptions = {};
 const app = express();
-app.use(express.json());
+app.use(bodyParser.json());
 const client = new MongoClient(
   "mongodb+srv://guesscareer:DjKy63efHXqkyF0r@guesscareer.vffvlwc.mongodb.net/guesscareer?retryWrites=true&w=majority",
   mongoOptions
