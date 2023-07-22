@@ -3,9 +3,7 @@
 .career-club-container {
   width: 50vw;
   aspect-ratio: 7/1;
-  /* background-color: #efefef; */
-  /* background-color: #6600ff; */
-  background-image: linear-gradient(to right, #5200cc, #944dff);
+  background-image: linear-gradient(to right, rgb(14, 52, 156), #1298ff);
   border: solid rgba(51, 125, 221, 0.651);
 
   border-radius: 10px;
@@ -85,7 +83,7 @@
 
 .index {
   /* background-color: black; */
-  background-color: #b380ff;
+  background-color: #15215a;
   background-image: none;
 }
 

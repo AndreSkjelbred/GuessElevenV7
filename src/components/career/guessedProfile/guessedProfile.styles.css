@@ -17,8 +17,8 @@
   width: 55vw;
   padding: 0 5vw;
   height: 20rem;
-  /* background-color: rgba(51, 125, 221, 0.644); */
-  background-color: #0a0019;
+  background-color: rgba(51, 125, 221, 0.644);
+
   box-shadow: 1px 1px 10px #000;
   transition: all 1s;
   border-radius: 100px;
@@ -83,8 +83,7 @@
 }
 
 .profile-img-container {
-  /* background-color: rgba(14, 108, 230, 1); */
-  background-color: #a366ff;
+  background-color: rgb(0, 64, 148);
 
   aspect-ratio: 1/1;
   height: 90%;
