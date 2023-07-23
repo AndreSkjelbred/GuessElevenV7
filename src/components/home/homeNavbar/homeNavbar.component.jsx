@@ -14,12 +14,12 @@ function HomeNavbar({ active, onClick }) {
   }
 
   return (
-    <div className='home-navbar'>
-      <div className='logo-login-container'>
-        <Link className='nav-link' href='/'>
-          <div className='logo-box'>
-            <div className='logo-main img'>
-              <Image alt='main-logo' src='/assets/logo7.png' fill />
+    <div className="home-navbar">
+      <div className="logo-login-container">
+        <Link className="nav-link" href="/">
+          <div className="logo-box">
+            <div className="logo-main img">
+              <Image alt="main-logo" src="/assets/logo7.png" fill />
             </div>
 
             <h4 className={`logo-title ${active === "home" ? "active" : ""}`}>
@@ -28,8 +28,8 @@ function HomeNavbar({ active, onClick }) {
           </div>
         </Link>
 
-        <div className='login-flex-box'>
-          <div className='btn-container'>
+        <div className="login-flex-box">
+          {/* <div className='btn-container'>
             <button className='lgn-btn login' onClick={loginModal}>
               Login
             </button>
@@ -38,23 +38,23 @@ function HomeNavbar({ active, onClick }) {
             <button className='lgn-btn register' onClick={registerModal}>
               Register
             </button>
-          </div>
+          </div> */}
 
-          <div class='contact-section'>
-            <button class='contact-btn'>Contact Us</button>
+          <div class="contact-section">
+            <button class="contact-btn">Contact Us</button>
           </div>
         </div>
       </div>
 
-      <div className='search-container'>
-        <form action='guess-eleven/how-to-play' className='search'>
-          <input type='text' className='search__input' placeholder='Search' />
-          <button className='search__button'>
-            <FaSearch className='hide-icon-title search-btn-icon' />
+      <div className="search-container">
+        <form action="guess-eleven/how-to-play" className="search">
+          <input type="text" className="search__input" placeholder="Search" />
+          <button className="search__button">
+            <FaSearch className="hide-icon-title search-btn-icon" />
           </button>
         </form>
-        <button className='info-button'>
-          <FaInfoCircle className='hide-icon-title info-btn-icon' />
+        <button className="info-button">
+          <FaInfoCircle className="hide-icon-title info-btn-icon" />
         </button>
       </div>
     </div>

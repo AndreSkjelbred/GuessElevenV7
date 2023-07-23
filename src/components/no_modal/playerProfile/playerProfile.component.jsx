@@ -11,14 +11,23 @@ import {
   setNameToBeFound,
   setRemainingGuesses,
 } from "../../../store/redux/guessEleven";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { setIsTeamInfoModalOpen } from "@/store/redux/teamInfo";
 
+const wait = (time) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, time * 1000);
+  });
+};
+
 function PlayerProfile(props) {
   const dispatch = useDispatch();
+
   const { guessedData } = useSelector((state) => state.guessEleven);
-  const { pos, known, name, number, photo, index } = props;
+  const { pos, known, name, number, photo, index, color } = props;
 
   let soFar;
   const nameArr = [...name.toLowerCase()].filter((char) => char !== " ");
@@ -40,21 +49,18 @@ function PlayerProfile(props) {
   }
 
   return (
-    <div className='profile-container'>
+    <div className={`profile-container `}>
       {known ? (
-        <div className={`label known  ${pos.toLowerCase()}-back`}>
-          <div className='profile-found img'>
+        <div
+          className={`label known  ${pos.toLowerCase()}-back flipped-profile-second`}
+        >
+          <div className="profile-found img">
             <Image
-              alt='pfp'
-              style={{
-                "border-top-left-radius": " 20%",
-                "border-top-right-radius": "20%",
-              }}
+              alt="pfp"
               fill
               src={photo !== "None" ? photo : "/../public/assets/noPic3.jpg"}
             />
           </div>
-
           <h5
             className={`${name.length > 12 ? "small-label" : ""}${
               name.length > 7 && name.length < 12 ? "medium-label" : ""
@@ -65,11 +71,25 @@ function PlayerProfile(props) {
         </div>
       ) : (
         <>
-          <div className={`label unknown ${index}`} onClick={toggleModal}>
-            <FaLock className='lock-icon hide-icon-title'></FaLock>
-            <h4 className='letter-count'>{name.length} </h4>
+          <div className={`module-border wrap-${color} ${index} `}>
+            <div
+              className={`label unknown ${color} ${index}`}
+              onClick={toggleModal}
+            >
+              <div className="profile-found img hidden">
+                <Image
+                  alt="pfp"
+                  fill
+                  src={
+                    photo !== "None" ? photo : "/../public/assets/noPic3.jpg"
+                  }
+                />
+              </div>
+              <FaLock className="lock-icon hide-icon-title"></FaLock>
+              <h4 className="letter-count">{name.length} </h4>
+            </div>{" "}
           </div>
-          <div className={`hidden-letters ${index}`}>
+          <div className={`hidden-letters hidden-${color} ${index}`}>
             {[...name].map((char) => {
               soFar += char;
               return char === " " ? (

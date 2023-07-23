@@ -7,20 +7,13 @@
   transform: translate(-50%, -50%);
   width: max-content;
   min-height: 100px;
-  background-color: black;
   padding: 2rem;
-  border-radius: 100px;
+  border-radius: 10px;
 
   z-index: 10;
-  background: rgba(4, 28, 66, 1);
 
-  background: linear-gradient(
-    to right,
-    rgba(4, 28, 66, 1),
-    rgb(79, 11, 148),
-    rgb(58, 58, 216)
-  );
-  box-shadow: 0.5rem 0.5rem 2rem white;
+  background: linear-gradient(to right, #080f70, #1c3ed6);
+  box-shadow: 0 1rem 2rem #000;
   border-top: solid;
 }
 
