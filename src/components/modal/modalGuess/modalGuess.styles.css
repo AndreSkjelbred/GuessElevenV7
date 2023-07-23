@@ -20,10 +20,24 @@
 .reveal-player-btn {
   position: absolute;
   top: 120%;
-  font-size: 2rem;
-  color: blue;
+  color: white;
+  background: linear-gradient(to right, #080f70, #1c3ed6);
   left: 50%;
   transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 1rem 2rem #000;
+  font-family: "Questrial";
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.5rem;
+  border: none;
+  text-align: center;
+}
+
+.reveal-player-btn:hover {
+  background: linear-gradient(to left, #000000, #224aff);
+  transform: translateX(-50%) scale(1.05);
 }
 
 .overlay {
@@ -118,3 +132,5 @@
   background-color: yellow;
   border-radius: 10%;
 }
+
+

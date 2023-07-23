@@ -6,6 +6,7 @@ import {
   incrementHiddenScore,
 } from "@/store/redux/hidden";
 import { useEffect } from "react";
+import { blurredPlayerText } from "@/text/text";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import * as Realm from "realm-web";
@@ -14,6 +15,7 @@ import { setSearchOpen } from "@/store/redux/hidden";
 import GuessedPlayersTwoColumns from "@/components/generalGameComponents/guessedPlayersTwoRows/guessedPlayersTwoRows.component";
 import Sidebar from "@/components/generalGameComponents/sidebar/sidebar.component";
 import { Fragment } from "react";
+import BlurScreen from "@/screens/blurScreen/blurScreen.component";
 import { FaSync } from "react-icons/fa";
 
 function HiddenPlayer() {
@@ -125,6 +127,9 @@ function HiddenPlayer() {
     <Fragment>
       <Sidebar />
       <FaSync className="new-game-icon new-game-career icon-pos-blur" />
+      {!Object.keys(hiddenPlayerData).length && (
+        <BlurScreen text={blurredPlayerText} />
+      )}
       <div className="hidden-face-root-container">
         <div className="score-image-highscore-container">
           <div className="current-score-container-hidden">

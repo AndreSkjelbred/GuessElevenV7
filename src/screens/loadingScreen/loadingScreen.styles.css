@@ -6,7 +6,7 @@
   width: 100vw;
 
   background-color: #333;
-  z-index: 1000;
+  z-index: 10;
 }
 
 #loader {
@@ -46,4 +46,10 @@
 }
 
 @media screen and (max-width: 780px) {
+}
+
+.loading-screen-text {
+  z-index: 11;
+  font-size: 4rem;
+  height: 20rem;
 }
