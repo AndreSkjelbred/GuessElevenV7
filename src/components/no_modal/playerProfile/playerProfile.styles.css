@@ -58,6 +58,7 @@ h5 {
   justify-content: space-around;
   align-items: center;
   z-index: 1;
+  transition: all 0.2s ease;
 }
 
 .profile-found {
@@ -112,7 +113,7 @@ h5 {
 }
 
 .unknown:hover {
-  background-image: linear-gradient(to bottom right, white, rgb(198, 191, 191));
+  cursor: pointer;
 }
 
 .unknown:active {
@@ -128,6 +129,7 @@ h5 {
   position: absolute;
   top: 50%;
   color: #ccc;
+  font-size: 1.5rem;
 }
 
 @keyframes animation {
@@ -229,30 +231,64 @@ h5 {
   background: linear-gradient(to right, #091c0c, #55a165);
 }
 
+.wrap-gk-background:hover {
+  background: #091c0c;
+}
+
 .wrap-def-background {
   background: linear-gradient(to right, #a86200, #f2981a);
 }
+
+.wrap-def-background:hover {
+  background: #a86200;
+}
+
 .wrap-mid-background {
   background: linear-gradient(to right, #0e385c, #64aeee);
 }
+
+.wrap-mid-background:hover {
+  background: #0e385c;
+}
+
 .wrap-for-background {
   background: linear-gradient(to right, #501111, #ce3f3f);
+}
+
+.wrap-for-background:hover {
+  background: #501111;
 }
 
 .gk-background {
   background-image: linear-gradient(to right, #2b8a3e, #51cf66);
 }
 
+.gk-background:hover {
+  background: #091c0c;
+}
+
 .def-background {
   background-image: linear-gradient(to right, #f08c00, #ffd43b);
+}
+
+.def-background:hover {
+  background: #a86200;
 }
 
 .mid-background {
   background-image: linear-gradient(to right, #228be6, #4ea2eb);
 }
 
+.mid-background:hover {
+  background: #0e385c;
+}
+
 .for-background {
   background-image: linear-gradient(to right, #c92a2a, #d45555);
+}
+
+.for-background:hover {
+  background: #501111;
 }
 
 @keyframes rotateUknownCard {

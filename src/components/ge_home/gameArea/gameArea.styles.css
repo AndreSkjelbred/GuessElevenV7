@@ -46,3 +46,13 @@
 .formation-root {
   z-index: 100;
 }
+
+.overlay-gradient {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 9;
+  background: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
