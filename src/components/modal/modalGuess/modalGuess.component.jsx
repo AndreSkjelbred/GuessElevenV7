@@ -252,6 +252,8 @@ function ModalGuess() {
     <Fragment>
       <FoundLetters letters={foundLetters} />
       <div className='modal '>
+        <button className='enter-ge-btn-mob'>Guess</button>
+
         <h3 className='remaining-guess-title'>{`Remaining Guesses: ${remainingGuesses}`}</h3>
         <button className='close-modal' onClick={toggleModal}>
           &times;

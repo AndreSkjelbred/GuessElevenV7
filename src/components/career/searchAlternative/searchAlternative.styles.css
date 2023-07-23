@@ -66,3 +66,9 @@
 .search-name {
   text-shadow: 0.4px, 0.4px, 0.1px white;
 }
+
+@media only screen and (max-width: 600px) {
+  .search-name {
+    font-size: 2.4rem;
+  }
+}
