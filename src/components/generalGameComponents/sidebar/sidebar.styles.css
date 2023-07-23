@@ -77,5 +77,16 @@
 
   .sidebar:hover .sidebar-text {
     display: block;
+    animation-name: nig;
+    animation-duration: 0.2s;
+  }
+}
+
+@keyframes nig {
+  0% {
+    display: none;
+  }
+  100% {
+    display: none;
   }
 }
