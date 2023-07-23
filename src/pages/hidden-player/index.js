@@ -14,6 +14,7 @@ import { setSearchOpen } from "@/store/redux/hidden";
 import GuessedPlayersTwoColumns from "@/components/generalGameComponents/guessedPlayersTwoRows/guessedPlayersTwoRows.component";
 import Sidebar from "@/components/generalGameComponents/sidebar/sidebar.component";
 import { Fragment } from "react";
+import { FaSync } from "react-icons/fa";
 
 function HiddenPlayer() {
   const [won, setWon] = useState(false);
@@ -123,6 +124,7 @@ function HiddenPlayer() {
   return (
     <Fragment>
       <Sidebar />
+      <FaSync className="new-game-icon new-game-career icon-pos-blur" />
       <div className="hidden-face-root-container">
         <div className="score-image-highscore-container">
           <div className="current-score-container-hidden">
