@@ -14,9 +14,9 @@ function GameArea() {
 
   const isGameActive = useSelector((state) => state.guessEleven.isGameActive);
   const { introDone } = useSelector((state) => state.video);
-  
+
   return (
-    <div className='game-screen-container'>
+    <div className="game-screen-container">
       {isGameActive ? (
         <FootballPitch></FootballPitch>
       ) : (

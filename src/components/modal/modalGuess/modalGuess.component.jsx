@@ -235,13 +235,13 @@ function ModalGuess() {
           value={green}
           ref={id === 1 ? inputReference : null}
           onClick={onClick}
-          autoComplete='off'
+          autoComplete="off"
           onChange={onChange}
           onKeyDown={onKeyDown}
           id={id}
-          type='text'
+          type="text"
           className={`typing-input  ${green && "green"}`}
-          maxLength='1'
+          maxLength="1"
         ></input>
       </Fragment>
     );
@@ -250,12 +250,12 @@ function ModalGuess() {
   return (
     <Fragment>
       <FoundLetters letters={foundLetters} />
-      <div className='modal '>
-        <h3 className='remaining-guess-title'>{`Remaining Guesses: ${remainingGuesses}`}</h3>
-        <button className='close-modal' onClick={toggleModal}>
+      <div className="modal ">
+        <h3 className="remaining-guess-title">{`Remaining Guesses: ${remainingGuesses}`}</h3>
+        <button className="close-modal" onClick={toggleModal}>
           &times;
         </button>
-        <div className='guess-container'>
+        <div className="guess-container">
           {[...name].map((char) => {
             if (char !== " ") soFar += 1;
             return char === " " ? (

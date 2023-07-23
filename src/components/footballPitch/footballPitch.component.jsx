@@ -43,7 +43,7 @@ function FootballPitch() {
   function TeamLogo({ teamLogo, classValue }) {
     return (
       <div className={`primary-team-logo img ${classValue}`}>
-        <Image fill alt='primary team' src={teamLogo} />
+        <Image fill alt="primary team" src={teamLogo} />
       </div>
     );
   }
@@ -59,134 +59,136 @@ function FootballPitch() {
     <Fragment>
       {loadingNewGame && <LoadingScreen />}
       {isTeamInfoModalOpen && <GameInfoModal />}
-      <div className='football-pitch-container left-container'>
-        <FaSync onClick={makeNewRound} className='new-game-icon ' />
+      <div className="football-pitch-container left-container">
+        <FaSync onClick={makeNewRound} className="new-game-icon " />
         <TeamLogo
           teamLogo={teamLogo}
           classValue={`guess-logo ${!animationFired && "scaleClass"}`}
         />
       </div>
 
+      <div className="overlay-gradient">&nbsp;</div>
+
       <div
         className={`game-area-container 
            area-background-active 
         `}
       >
-        <div className='left-line line img'>
-          <Image quality={1} fill alt='left-line' src='/whiterectangle.png' />
+        <div className="left-line line img">
+          <Image quality={1} fill alt="left-line" src="/whiterectangle.png" />
         </div>
-        <div className='right-line line img'>
-          <Image quality={1} fill alt='right-line' src='/whiterectangle.png' />
+        <div className="right-line line img">
+          <Image quality={1} fill alt="right-line" src="/whiterectangle.png" />
         </div>
-        <div className='top-line line img'>
-          <Image quality={1} fill alt='right-line' src='/whiterectangle.png' />
+        <div className="top-line line img">
+          <Image quality={1} fill alt="right-line" src="/whiterectangle.png" />
         </div>
-        <div className='bottom-line line img'>
-          <Image quality={1} fill alt='right-line' src='/whiterectangle.png' />
+        <div className="bottom-line line img">
+          <Image quality={1} fill alt="right-line" src="/whiterectangle.png" />
         </div>
-        <div className='sixteen-left line img'>
+        <div className="sixteen-left line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
-        <div className='sixteen-right line img'>
+        <div className="sixteen-right line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
-        <div className='sixteen-front line img'>
+        <div className="sixteen-front line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
-        <div className='sixteen-inside-right line img'>
+        <div className="sixteen-inside-right line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
-        <div className='sixteen-inside-left line img'>
+        <div className="sixteen-inside-left line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
-        <div className='sixteen-inside-middle line img'>
+        <div className="sixteen-inside-middle line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
-        <div className='half-circle img'>
+        <div className="half-circle img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/../../../public/assets/half-circle.png'
+            alt="sixteen-area"
+            src="/../../../public/assets/half-circle.png"
           />
         </div>
-        <div className='line-one line behind-line img'>
+        <div className="line-one line behind-line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
-        <div className='line-two line behind-line img'>
+        <div className="line-two line behind-line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
-        <div className='line-three line behind-line img'>
+        <div className="line-three line behind-line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
-        <div className='line-four line behind-line img'>
+        <div className="line-four line behind-line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
-        <div className='line-five line behind-line img'>
+        <div className="line-five line behind-line img">
           <Image
             quality={1}
             fill
-            alt='sixteen-area'
-            src='/whiterectangle.png'
+            alt="sixteen-area"
+            src="/whiterectangle.png"
           />
         </div>
 
         {!loadingNewGame && <Formation />}
       </div>
-      <div className='football-pitch-container right-container'>
+      <div className="football-pitch-container right-container">
         <FaInfoCircle
           onClick={toggleGameInfoModal}
-          className='info-modal-icon '
+          className="info-modal-icon "
         />
         <TeamLogo
           teamLogo={opponentLogo}
