@@ -27,6 +27,7 @@ import { initNewRound } from "../../store/redux/teamInfo";
 import createNewRound from "../../store/functions/model";
 import Image from "next/image";
 import Head from "next/head";
+import Sidebar from "@/components/generalGameComponents/sidebar/sidebar.component";
 
 const wait = (time) => {
   return new Promise((resolve) => {
@@ -96,6 +97,7 @@ function GuessEleven() {
       </Head>
       <div className={`guess-eleven-container `}>
         <HomeNavbar />
+        <Sidebar />
         {/* !gameBegun && <LoadingScreen /> */}
         {/*initialedIntro &&
           {
