@@ -235,6 +235,7 @@ function ModalGuess() {
           value={green}
           ref={id === 1 ? inputReference : null}
           onClick={onClick}
+          disabled={remainingGuesses === 0}
           autoComplete='off'
           onChange={onChange}
           onKeyDown={onKeyDown}
@@ -265,6 +266,9 @@ function ModalGuess() {
             );
           })}
         </div>
+        {!remainingGuesses && (
+          <button className='reveal-player-btn'>Reveal Player</button>
+        )}
       </div>
     </Fragment>
   );

@@ -17,6 +17,15 @@
   border-top: solid;
 }
 
+.reveal-player-btn {
+  position: absolute;
+  top: 120%;
+  font-size: 2rem;
+  color: blue;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .overlay {
   position: absolute;
   top: 0;
