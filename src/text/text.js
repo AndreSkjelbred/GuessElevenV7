@@ -3,3 +3,7 @@ export const guessElevenText =
 
 export const careerPathText =
   "Can you find the player based on their past clubs? This game requires knowledge about football history and transfer history. Good Luck!";
+
+export const blurredPlayerText = "igger";
+
+export const higherLowerText = "igger";

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Fragment, useRef } from "react";
 
 import { FaSync, FaInfoCircle } from "react-icons/fa";
-
+import { guessElevenText } from "@/text/text";
 import GameInfoModal from "../modal/gameInfoModal/gameInfoModal.component";
 import { setIsTeamInfoModalOpen } from "../../store/redux/teamInfo";
 import { setModalOpen } from "../../store/redux/guessEleven";
@@ -57,7 +57,7 @@ function FootballPitch() {
 
   return (
     <Fragment>
-      {loadingNewGame && <LoadingScreen />}
+      {loadingNewGame && <LoadingScreen text={guessElevenText} />}
       {isTeamInfoModalOpen && <GameInfoModal />}
       <div className='football-pitch-container left-container'>
         <FaSync onClick={makeNewRound} className='new-game-icon ' />
