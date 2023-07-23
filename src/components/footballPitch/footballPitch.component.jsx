@@ -61,10 +61,10 @@ function FootballPitch() {
       {isTeamInfoModalOpen && <GameInfoModal />}
       <div className='football-pitch-container left-container'>
         <FaSync onClick={makeNewRound} className='new-game-icon ' />
-        {/*  <TeamLogo
+        <TeamLogo
           teamLogo={teamLogo}
           classValue={`guess-logo ${!animationFired && "scaleClass"}`}
-        /> */}
+        />
       </div>
 
       <div
@@ -188,10 +188,10 @@ function FootballPitch() {
           onClick={toggleGameInfoModal}
           className='info-modal-icon '
         />
-        {/*   <TeamLogo
+        <TeamLogo
           teamLogo={opponentLogo}
           classValue={` ${!animationFired && "scaleClass"}`}
-        /> */}
+        />
       </div>
     </Fragment>
   );

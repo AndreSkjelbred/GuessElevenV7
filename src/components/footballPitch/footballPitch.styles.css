@@ -131,6 +131,7 @@
 .primary-team-logo {
   position: relative;
   height: 13vh;
+  aspect-ratio: 1;
   padding-bottom: 4vh;
   border-bottom: white 2px solid;
 }
@@ -189,9 +190,9 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .primary-team-logo {
+  /* .primary-team-logo {
     display: none;
-  }
+  } */
   .football-pitch-container {
     justify-content: center;
   }
