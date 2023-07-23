@@ -136,8 +136,15 @@
   border-bottom: white 2px solid;
 }
 
+@media only screen and (max-width: 600px) {
+  .primary-team-logo {
+    height: 8vh;
+  }
+}
+
 .guess-logo {
   border-bottom: green solid;
+  margin-left: 9rem;
 }
 
 .football-pitch-container {
