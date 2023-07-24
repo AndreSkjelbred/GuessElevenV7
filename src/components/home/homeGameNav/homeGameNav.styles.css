@@ -89,6 +89,10 @@
   }
 }
 
+.games-link-container h2 {
+  width: 100%;
+}
+
 .games-link-container {
   display: flex;
   flex-direction: column;
