@@ -79,6 +79,12 @@
   font-family: "Poppins";
 }
 
+@media only screen and (max-width: 475px) {
+  .input-career {
+    width: 50%;
+  }
+}
+
 input:focus {
   outline: none;
 }
@@ -162,4 +168,11 @@ input:focus {
   position: absolute;
   top: 10%;
   left: 30%;
+}
+
+@media only screen and (max-width: 475px) {
+  .new-game-career {
+    top: 50%;
+    left: 30%;
+  }
 }
