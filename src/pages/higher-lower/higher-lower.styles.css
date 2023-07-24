@@ -202,6 +202,8 @@
 
 .higher-lower-play-again {
   color: #efefef;
+  position: absolute;
+  top: 80%;
 }
 
 .fade-screen-out {
