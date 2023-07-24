@@ -28,6 +28,7 @@ import createNewRound from "../../store/functions/model";
 import Image from "next/image";
 import Head from "next/head";
 import Sidebar from "@/components/generalGameComponents/sidebar/sidebar.component";
+import { bsEleven } from "@/text/text";
 
 const wait = (time) => {
   return new Promise((resolve) => {
@@ -96,6 +97,7 @@ function GuessEleven() {
         ></script>
       </Head>
       <div className={`guess-eleven-container `}>
+      <p className="bs-text">{bsEleven}</p>
         <HomeNavbar />
         <Sidebar />
         {/* !gameBegun && <LoadingScreen /> */}

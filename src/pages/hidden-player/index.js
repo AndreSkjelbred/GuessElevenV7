@@ -7,7 +7,7 @@ import {
   resetScore,
 } from "@/store/redux/hidden";
 import { useEffect } from "react";
-import { blurredPlayerText } from "@/text/text";
+import { blurredPlayerText, bsHiddenPlayer } from "@/text/text";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import * as Realm from "realm-web";
@@ -142,6 +142,7 @@ function HiddenPlayer() {
 
   return (
     <Fragment>
+      <p className='bs-text'>{bsHiddenPlayer}</p>
       <Sidebar />
       <FaSync
         onClick={makeNewRound}

@@ -176,3 +176,10 @@ input:focus {
     left: 30%;
   }
 }
+
+.bs-text {
+  font-size: 0.01;
+
+  position: absolute;
+  z-index: -1;
+}
