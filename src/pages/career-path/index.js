@@ -4,10 +4,11 @@ import { Fragment, useEffect, useState } from "react";
 import * as Realm from "realm-web";
 import { incrementGuessCount, resetCareer } from "@/store/redux/career";
 import { careerPathText } from "@/text/text";
+import { bsCareerPath } from "@/text/text";
 import { useDispatch, useSelector } from "react-redux";
 import SearchAlternative from "@/components/career/searchAlternative/searchAlternative.component";
 import BlurScreen from "@/screens/blurScreen/blurScreen.component";
-import GuessedProfile from "@/components/career/guessedProfile/guessedProfile";
+
 import HomeNavbar from "@/components/home/homeNavbar/homeNavbar.component";
 import { FaSync, FaInfoCircle } from "react-icons/fa";
 import createCareerRound from "@/store/makeCareerRound/model";
@@ -130,6 +131,7 @@ function Career() {
         ></script>
       </Head>
       <div className='career-page'>
+      <p className="bs-text">{bsCareerPath}</p>
         <HomeNavbar />
         <Sidebar />
         <FaSync

@@ -17,6 +17,7 @@ import LoginForm from "@/components/home/loginForm/loginForm.component";
 import RegisterForm from "@/components/home/registerForm/registerForm.component";
 
 import Image from "next/image";
+import { bsHome } from "@/text/text";
 
 export default function Home() {
   const [logReg, setLogReg] = useState(0);
@@ -101,6 +102,7 @@ export default function Home() {
       </picture>
 
       {loading || (!imgsLoaded && <LoadingScreen />)}
+      <p className='bs-text'>{bsHome}</p>
       {logReg === 1 && <LoginForm />}
       {logReg === 2 && <RegisterForm />}
 
