@@ -90,3 +90,7 @@
     display: none;
   }
 }
+
+.active-game {
+  border: 2px solid #fff;
+}
