@@ -4,6 +4,7 @@ import createHiddenRound from "@/store/makeHiddenFaceRound/makeHiddenRound";
 import {
   incrementHiddenGuessCount,
   incrementHiddenScore,
+  resetScore,
 } from "@/store/redux/hidden";
 import { useEffect } from "react";
 import { blurredPlayerText } from "@/text/text";
@@ -21,6 +22,7 @@ import { FaSync } from "react-icons/fa";
 function HiddenPlayer() {
   const [won, setWon] = useState(false);
   const [alive, setAlive] = useState(true);
+  const lives = 8;
   const [filteredPlayers, setFilteredPlayers] = useState([]);
   const [searchFieldValue, setSearchField] = useState("");
   const [guessedPlayers, setGuessedPlayers] = useState([]);
@@ -42,8 +44,20 @@ function HiddenPlayer() {
 
   const { hiddenPlayerData } = useSelector((state) => state.hidden);
 
+  function makeNewRound() {
+    createHiddenRound(dispatch);
+  }
+
+  function revealPlayer() {
+    if (won) return;
+    guessHandler({ ...hiddenPlayerData, reveal: true });
+  }
+
   function guessHandler(player) {
-    const input = document.querySelector(".input-career");
+    let input;
+    if (!player.reveal) {
+      input = document.querySelector(".input-career");
+    }
 
     setGuessedPlayers([
       ...guessedPlayers,
@@ -75,15 +89,18 @@ function HiddenPlayer() {
         },
       ],
     ]);
-
-    if (player.name === hiddenPlayerData.name) {
+    setWon(true);
+    if (player.name === hiddenPlayerData.name && !player?.reveal) {
       setWon(true);
       dispatch(incrementHiddenScore());
     }
-    if (guessCount + 1 === hiddenPlayerData.teamsTotal) {
+
+    if (guessCount === lives) {
       setAlive(false);
+      dispatch(resetScore());
     }
 
+    if (player?.reveal) return;
     dispatch(incrementHiddenGuessCount());
     input.value = "";
     setSearchField("");
@@ -126,42 +143,52 @@ function HiddenPlayer() {
   return (
     <Fragment>
       <Sidebar />
-      <FaSync className="new-game-icon new-game-career icon-pos-blur" />
+      <FaSync
+        onClick={makeNewRound}
+        className='new-game-icon new-game-career icon-pos-blur'
+      />
       {!Object.keys(hiddenPlayerData).length && (
         <BlurScreen text={blurredPlayerText} />
       )}
-      <div className="hidden-face-root-container">
-        <div className="score-image-highscore-container">
-          <div className="current-score-container-hidden">
+      <div className='hidden-face-root-container'>
+        <div className='score-image-highscore-container'>
+          <div className='current-score-container-hidden'>
             <h3>Current Streak:</h3>
             <h3>{score}</h3>
           </div>
 
-          <div className="player-img-container img blur-img">
+          <div className='player-img-container img blur-img'>
             <Image
-              alt="hidden-player"
+              alt='hidden-player'
               fill
               src={hiddenPlayerData.imgSrc}
               quality={won ? 100 : 1}
             />
           </div>
-          <div className="current-score-container-hidden">
+          <div className='current-score-container-hidden'>
             <h3>Highest Streak:</h3>
             <h3>{highScore}</h3>
           </div>
         </div>
         <HomeNavbar />
 
-        <div className="search-area-container">
-          <div className="career-input-container">
-            <input onChange={onSearchChange} className="input-career" />
+        {alive && (
+          <div className='search-area-container'>
+            <div className='career-input-container'>
+              <input onChange={onSearchChange} className='input-career' />
+            </div>
+            <div className='filtered-players-container-hidden'>
+              {filteredPlayers.map((player) => (
+                <SearchAlternative onClick={guessHandler} player={player} />
+              ))}
+            </div>
           </div>
-          <div className="filtered-players-container-hidden">
-            {filteredPlayers.map((player) => (
-              <SearchAlternative onClick={guessHandler} player={player} />
-            ))}
-          </div>
-        </div>
+        )}
+        {!alive && !won && (
+          <button onClick={revealPlayer} className='reveal-player-btn'>
+            Reveal Player
+          </button>
+        )}
         <GuessedPlayersTwoColumns guessedPlayers={guessedPlayers} />
       </div>{" "}
     </Fragment>

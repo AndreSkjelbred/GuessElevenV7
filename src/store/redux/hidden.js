@@ -38,6 +38,9 @@ const hiddenSlice = createSlice({
       const { payload } = action;
       state.searchIsOpen = payload;
     },
+    resetScore: (state) => {
+      state.score = 0;
+    },
   },
 });
 export const incrementHiddenGuessCount =
@@ -45,6 +48,7 @@ export const incrementHiddenGuessCount =
 export const resetHidden = hiddenSlice.actions.resetHidden;
 export const setSearchOpen = hiddenSlice.actions.setSearchOpen;
 export const incrementHiddenScore = hiddenSlice.actions.incrementHiddenScore;
+export const { resetScore } = hiddenSlice.actions;
 export const incrementHiddenHighscore =
   hiddenSlice.actions.incrementHiddenHighscore;
 export const createHiddenPlayerData =

@@ -73,8 +73,15 @@ function Career() {
 
   const [alive, setAlive] = useState(true);
   const [won, setWon] = useState(false);
+  console.log(data[0]);
+  function revealPlayer() {
+    guessHandler({ ...data[0], reveal: true });
+  }
   function guessHandler(player) {
-    const input = document.querySelector(".input-career");
+    let input;
+    if (!player?.reveal) {
+      input = document.querySelector(".input-career");
+    }
 
     setGuessedPlayers([
       ...guessedPlayers,
@@ -92,11 +99,13 @@ function Career() {
       setWon(true);
       dispatch(incrementGuessCount(100));
     }
+    if (player?.reveal) return;
     if (guessCount + 1 === data[0].teamsTotal) {
       setAlive(false);
     }
 
     dispatch(incrementGuessCount());
+
     input.value = "";
     setSearchField("");
     input.focus();
@@ -179,6 +188,11 @@ function Career() {
                 );
               })}
             </div>
+          )}
+          {!alive && !won && (
+            <button onClick={revealPlayer} className='reveal-player-btn'>
+              Reveal Player
+            </button>
           )}
           <GuessedPlayersTwoColumns guessedPlayers={guessedPlayers} />
         </div>

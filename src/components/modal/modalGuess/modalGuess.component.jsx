@@ -280,7 +280,7 @@ function ModalGuess() {
           })}
         </div>
         {!remainingGuesses && (
-          <button onClick={revealPlayer} className='reveal-player-btn'>
+          <button onClick={revealPlayer} className='reveal-player-btn ge-btn-reveal'>
             Reveal Player
           </button>
         )}
