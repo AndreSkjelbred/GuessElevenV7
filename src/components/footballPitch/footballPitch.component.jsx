@@ -15,7 +15,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 
 function FootballPitch() {
-  const [loadingNewGame, setLoadingNewGame] = useState(false);
+  const [loadingNewGame, setLoadingNewGame] = useState(true);
 
   const dispatch = useDispatch();
 
