@@ -38,6 +38,12 @@
   }
 }
 
+@media only screen and (max-width: 475px) {
+  .score-image-highscore-container {
+    margin-top: 35rem;
+  }
+}
+
 .current-score-container-hidden {
   width: 20rem;
   height: 10rem;
@@ -53,6 +59,14 @@
 }
 .current-score-container-hidden > *:nth-child(1) {
   color: #bad1e6;
+}
+
+@media only screen and (max-width: 475px) {
+  .current-score-container-hidden {
+    width: 35rem;
+    height: 25rem;
+    font-size: 2.6rem;
+  }
 }
 
 .blur-img {
@@ -102,4 +116,10 @@
 
 .icon-pos-blur {
   top: 45%;
+}
+
+@media only screen and (max-width: 600px) {
+  .icon-pos-blur {
+    top: 48%;
+  }
 }
