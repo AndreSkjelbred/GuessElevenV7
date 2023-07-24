@@ -89,6 +89,15 @@ function ModalGuess() {
     }, 1);
   }
 
+  function makeGuess() {
+    onKeyDown({ code: "Enter" });
+  }
+
+  function revealPlayer() {
+    dispatch(addGuessedPlayer(number));
+    dispatch(setModalOpen());
+  }
+
   function moveLeft() {
     if (curIndex === 1) return;
     curIndex -= 1;
@@ -194,7 +203,7 @@ function ModalGuess() {
       }
       dispatch(setRemainingGuesses(number));
     }
-    if (e.code !== "Backspace" && e.target.readOnly) {
+    if (e.code !== "Backspace" && e?.target?.readOnly) {
       e.preventDefault();
       moveRight();
     }
@@ -252,7 +261,9 @@ function ModalGuess() {
     <Fragment>
       <FoundLetters letters={foundLetters} />
       <div className='modal '>
-        <button className='enter-ge-btn-mob'>Guess</button>
+        <button onClick={makeGuess} className='enter-ge-btn-mob'>
+          Guess
+        </button>
 
         <h3 className='remaining-guess-title'>{`Remaining Guesses: ${remainingGuesses}`}</h3>
         <button className='close-modal' onClick={toggleModal}>
@@ -269,7 +280,9 @@ function ModalGuess() {
           })}
         </div>
         {!remainingGuesses && (
-          <button className='reveal-player-btn'>Reveal Player</button>
+          <button onClick={revealPlayer} className='reveal-player-btn'>
+            Reveal Player
+          </button>
         )}
       </div>
     </Fragment>
