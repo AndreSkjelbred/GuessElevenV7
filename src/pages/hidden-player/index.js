@@ -136,6 +136,25 @@ function HiddenPlayer() {
     } catch (err) {
       console.error(err);
     }
+    /*  try {
+      fetch("api/search", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          query: searchFieldValue,
+        }),
+      })
+        .then((res) => res.json())
+        .then((newFilteredPlayers) => {
+          console.log(newFilteredPlayers);
+          setFilteredPlayers(newFilteredPlayers);
+          newFilteredPlayers.length > 0 && dispatch(setSearchOpen(true));
+        });
+    } catch (err) {
+      console.error(err);
+    } */
   }, [searchFieldValue]);
 
   const { guessCount } = useSelector((state) => state.hidden);
@@ -179,9 +198,10 @@ function HiddenPlayer() {
               <input onChange={onSearchChange} className='input-career' />
             </div>
             <div className='filtered-players-container-hidden'>
-              {filteredPlayers.map((player) => (
-                <SearchAlternative onClick={guessHandler} player={player} />
-              ))}
+              {filteredPlayers.length > 0 &&
+                filteredPlayers?.map((player) => (
+                  <SearchAlternative onClick={guessHandler} player={player} />
+                ))}
             </div>
           </div>
         )}
@@ -197,9 +217,3 @@ function HiddenPlayer() {
 }
 
 export default HiddenPlayer;
-
-3 / 2;
-8 / 2;
-7 / 3;
-21 / 3;
-18 / 1;
