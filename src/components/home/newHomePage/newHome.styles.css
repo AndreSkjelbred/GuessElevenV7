@@ -56,7 +56,7 @@ html {
   transition: all 0.2s ease;
 }
 
-.logo:hover {
+.home-logo:hover {
   color: transparent;
   cursor: pointer;
   transition-duration: 0.2s;
