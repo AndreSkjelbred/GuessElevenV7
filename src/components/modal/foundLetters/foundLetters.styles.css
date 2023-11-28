@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,300&display=swap");
+
 .found-modal {
   position: absolute;
 
@@ -9,13 +11,12 @@
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  text-shadow: 1px 1px 1px black;
-  font-family: "Questrial";
+  font-family: "Poppins";
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
-  background: linear-gradient(to right, #080f70, #1c3ed6);
-  color: #f1f6f5;
+  background-color: #010125;
+  color: #bad1e6;
   box-shadow: 0.1rem 0.1rem 0.5rem black;
 }
 
@@ -24,6 +25,5 @@
   gap: 1rem;
   font-size: 2.6rem;
   justify-content: center;
-  color: rgb(204, 204, 62);
-  color: #1ba98c;
+  color: #459ff3;
 }

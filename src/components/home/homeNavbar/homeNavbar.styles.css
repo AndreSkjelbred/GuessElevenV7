@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,300&display=swap");
+@import url("https://db.onlinewebfonts.com/c/2f8845bdde42e943355a39765c5be5c0?family=Druk+Wide+Web+Super+Regular");
+
 .home-navbar {
-  width: 94vw;
+  width: 80vw;
   background-image: linear-gradient(
     rgba(4, 19, 61, 0.262),
     rgba(1, 1, 37, 0.694)
@@ -15,6 +18,7 @@
   align-items: center;
   justify-content: space-between;
   z-index: 1;
+  font-family: "Poppins", sans-serif;
 }
 
 .logo-login-container {
@@ -49,7 +53,8 @@
   color: #f7fbfa;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Marcellus";
+  font-family: "Druk Wide Web Super Regular";
+  font-weight: 300;
   letter-spacing: 0.3rem;
   font-size: 2rem;
 }
@@ -97,7 +102,7 @@
   font-size: 2.6rem;
 }
 
-.instagram {
+/* .instagram {
   background: #d6249f;
   background: radial-gradient(
     circle at 30% 107%,
@@ -114,7 +119,7 @@
 
 .twitter {
   color: #0072c6;
-}
+} */
 
 .search {
   margin-right: 0vw;

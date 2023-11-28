@@ -6,7 +6,11 @@ html {
   padding: 0;
   font-size: 62.5%;
 
-  background-color: white;
+  /* background-color: white; */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -50,6 +54,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {

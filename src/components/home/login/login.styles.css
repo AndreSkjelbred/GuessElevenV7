@@ -11,11 +11,9 @@
   height: 100%;
   font-family: "Marcellus";
   font-size: 1.8rem;
-
 }
 
 .login {
-
   color: rgb(255, 255, 255);
 }
 
@@ -38,19 +36,18 @@
 }
 
 .info-btn-icon {
-  height: 2.0em;
-  width: 2.0em;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
 }
 
-.about-btn, .contact-btn {
+.about-btn,
+.contact-btn {
   background-color: transparent;
   border-radius: 5rem;
   border: none;
   height: 100%;
-  font-family: "Marcellus";
+  font-family: "Poppins";
   font-size: 1.8rem;
   color: #ffffff;
 }
-
-
-

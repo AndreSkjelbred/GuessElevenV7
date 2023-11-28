@@ -18,10 +18,6 @@ function HomeNavbar({ active, onClick }) {
       <div className="logo-login-container">
         <Link className="nav-link" href="/">
           <div className="logo-box">
-            <div className="logo-main img">
-              <Image alt="main-logo" src="/assets/logo7.png" fill />
-            </div>
-
             <h4 className={`logo-title ${active === "home" ? "active" : ""}`}>
               TWIRE
             </h4>

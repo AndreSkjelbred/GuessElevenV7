@@ -3,18 +3,16 @@
 .career-club-container {
   width: 50vw;
   aspect-ratio: 7/1;
-  background-image: linear-gradient(to right, rgb(14, 52, 156), #1298ff);
-  border: solid rgba(51, 125, 221, 0.651);
+  /* background-image: linear-gradient(to right, rgb(14, 52, 156), #1298ff); */
+  background-color: #cde4fa;
 
+  border: solid #1a1a3b;
   border-radius: 10px;
-
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   flex: 1;
-  /* font-family: "Verdana"; */
   font-family: "Poppins", sans-serif;
-
   position: relative;
 }
 
@@ -83,7 +81,7 @@
 
 .index {
   /* background-color: black; */
-  background-color: #15215a;
+  background-color: rgba(1, 1, 37, 0.894);
   background-image: none;
 }
 

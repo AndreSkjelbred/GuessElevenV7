@@ -33,6 +33,7 @@ import "../pages/contact-us/contact-us.styles.css";
 import "../pages/info/info.styles.css";
 import "../components/generalGameComponents/guessedProfileImage/guessedProfileImage.styles.css";
 import "../components/generalGameComponents/sidebar/sidebar.styles.css";
+import "../components/home/newHomePage/newHome.styles.css";
 
 import Head from "next/head";
 import Script from "next/script";

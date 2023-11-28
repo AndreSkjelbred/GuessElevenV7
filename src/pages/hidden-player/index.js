@@ -161,43 +161,44 @@ function HiddenPlayer() {
 
   return (
     <Fragment>
-      <p className='bs-text'>{bsHiddenPlayer}</p>
+      <p className="bs-text">{bsHiddenPlayer}</p>
       <Sidebar />
-      <FaSync
-        onClick={makeNewRound}
-        className='new-game-icon new-game-career icon-pos-blur'
-      />
       {!Object.keys(hiddenPlayerData).length && (
         <BlurScreen text={blurredPlayerText} />
       )}
-      <div className='hidden-face-root-container'>
-        <div className='score-image-highscore-container'>
-          <div className='current-score-container-hidden'>
+      <div className="hidden-face-root-container">
+        <div className="score-image-highscore-container">
+          <div className="current-score-container-hidden">
             <h3>Current Streak:</h3>
-            <h3>{score}</h3>
+            <h3 className="score">{score}</h3>
           </div>
 
-          <div className='player-img-container img blur-img'>
+          <div className="player-img-container img blur-img">
             <Image
-              alt='hidden-player'
+              alt="hidden-player"
               fill
               src={hiddenPlayerData.imgSrc}
+              draggable="false"
               quality={won ? 100 : 1}
             />
           </div>
-          <div className='current-score-container-hidden'>
+          <div className="current-score-container-hidden">
             <h3>Highest Streak:</h3>
-            <h3>{highScore}</h3>
+            <h3 className="score">{highScore}</h3>
           </div>
         </div>
         <HomeNavbar />
 
         {alive && (
-          <div className='search-area-container'>
-            <div className='career-input-container'>
-              <input onChange={onSearchChange} className='input-career' />
+          <div className="search-area-container">
+            <FaSync
+              onClick={makeNewRound}
+              className="new-game-icon new-game-career icon-pos-blur"
+            />
+            <div className="career-input-container">
+              <input onChange={onSearchChange} className="input-career" />
             </div>
-            <div className='filtered-players-container-hidden'>
+            <div className="filtered-players-container-hidden">
               {filteredPlayers.length > 0 &&
                 filteredPlayers?.map((player) => (
                   <SearchAlternative onClick={guessHandler} player={player} />
@@ -206,7 +207,7 @@ function HiddenPlayer() {
           </div>
         )}
         {!alive && !won && (
-          <button onClick={revealPlayer} className='reveal-player-btn'>
+          <button onClick={revealPlayer} className="reveal-player-btn">
             Reveal Player
           </button>
         )}

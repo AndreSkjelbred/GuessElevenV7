@@ -156,6 +156,10 @@
   width: 10vw;
 }
 
+.left-container {
+  justify-content: flex-end;
+}
+
 .new-game-icon {
   font-size: 3rem;
   color: aliceblue;

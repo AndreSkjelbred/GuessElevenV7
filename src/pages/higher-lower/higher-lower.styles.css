@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
 
@@ -7,7 +8,18 @@
 
   align-items: center;
   justify-content: center;
-  font-family: "Alkatra", cursive;
+  font-family: "Poppins", sans-serif;
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(4, 19, 61, 0.562),
+      rgba(8, 3, 56, 0.8)
+    ),
+    url(/higherlower.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
 }
 
 .higher-lower-back-image {
@@ -21,33 +33,32 @@
   flex-direction: column;
   gap: 2rem;
   z-index: 1;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-  background-color: rgba(0, 115, 198, 0.552);
-  border: solid rgba(0, 115, 198, 0.6);
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
+  border-radius: 11px;
+  background-color: #bad1e6;
+  border: 2px solid rgba(1, 1, 37, 0.794);
   padding: 1rem;
 }
 
-.arrow-container h2 {
-  margin: auto;
-  text-align: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  user-select: none;
-}
-
 .arrow-container > * {
-  color: #fff;
-  box-shadow: 5px 5px 10px black;
+  color: #010125;
+  /* box-shadow: 5px 5px 10px black; */
   z-index: 2;
   font-size: 6rem;
   border-radius: 50%;
+  transition: all 0.3s;
 }
+
 .arrow-container h2 {
   margin: auto;
   text-align: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
   box-shadow: 0px 0px 0px black;
   border-radius: 0;
+}
+
+.hover:hover {
+  color: #1a1a3b;
 }
 
 .higher-lower-players-field {
@@ -58,7 +69,7 @@
   display: flex;
   overflow: hidden;
   justify-content: space-around;
-  border: solid rgba(0, 115, 198, 0.6);
+  border: solid #bad1e6;
   height: 70rem;
   align-items: center;
 }
@@ -164,7 +175,9 @@
 .higher-lower-player-info {
   font-size: 3rem;
   color: rgb(219, 219, 219);
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 1px 2px 1px black;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .higher-lower-player-name {
@@ -182,9 +195,8 @@
   font-family: "Poppins";
   text-transform: uppercase;
   height: 50rem;
-  font-size: 4rem;
-  color: rgb(160, 160, 160);
-  text-shadow: 2px 2px 0 black;
+  font-size: 3.5rem;
+  color: #bad1e6;
   z-index: 1;
   border-radius: 20px;
   display: flex;
@@ -193,7 +205,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: rgba(0, 115, 198, 0.6);
+  background-color: rgba(1, 1, 37, 0.95);
 }
 
 .higher-lower-lost-game-screen > h2:nth-child(even) {

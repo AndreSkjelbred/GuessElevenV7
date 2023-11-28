@@ -7,13 +7,13 @@ function GuessedProfile({ player }) {
   }
 
   return (
-    <div className='guessed-profile-container'>
+    <div className="guessed-profile-container">
       {!isArray ? (
         <>
           <div className={`profile-img-container ${player.playerClass}`}>
-            <div className='guessed-profile-player-img guessed-profile img'>
+            <div className="guessed-profile-player-img guessed-profile img">
               <Image
-                className='guessed-profile-player-img'
+                className="guessed-profile-player-img"
                 fill
                 src={player.imgSrc}
               />
@@ -21,13 +21,13 @@ function GuessedProfile({ player }) {
           </div>
 
           <div className={`profile-img-container ${player.leagueClass}`}>
-            <div className='guessed-profile-league-img guessed-profile img'>
+            <div className="guessed-profile-league-img guessed-profile img">
               <Image fill src={player.leagueImg} />
             </div>
           </div>
 
           <div className={`profile-img-container ${player.clubClass}`}>
-            <div className='guessed-profile-club-img guessed-profile img'>
+            <div className="guessed-profile-club-img guessed-profile img">
               <Image fill src={player.clubImg} />
             </div>{" "}
           </div>

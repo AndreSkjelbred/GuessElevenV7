@@ -1,8 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 .career-page {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to right bottom,
       rgba(5, 5, 5, 0.748),
       rgba(3, 3, 3, 0.786)
+    ),
+    url("/careerpath.jpeg"); */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(4, 19, 61, 0.562),
+      rgba(8, 3, 56, 0.8)
     ),
     url("/careerpath.jpeg");
   background-size: cover;
@@ -167,13 +175,14 @@ input:focus {
 .new-game-career {
   position: absolute;
   top: 10%;
-  left: 30%;
+  right: 30%;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 475px) {
   .new-game-career {
     top: 50%;
-    left: 30%;
+    right: 30%;
   }
 }
 

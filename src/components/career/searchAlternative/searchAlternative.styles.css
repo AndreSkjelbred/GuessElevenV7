@@ -1,22 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,300&display=swap");
+
 .search-alternative {
   display: flex;
   height: 10rem;
   width: 100%;
   justify-content: space-between;
-  background-color: #3a78f9;
+  background-color: #cde4fa;
+  font-family: "Poppins";
+  text-transform: uppercase;
 
   border-radius: 3px;
   padding: 0 2rem;
   align-items: center;
-  color: rgb(246, 236, 224);
+  color: rgba(1, 1, 37);
   font-size: 1.3rem;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .search-alternative:hover {
-  background-image: linear-gradient(to right, #0b0563, #2447e7);
-  scale: 1.2;
+  background-color: #b9cde1;
+  scale: 1.1;
 }
 
 .search-alternative:active {

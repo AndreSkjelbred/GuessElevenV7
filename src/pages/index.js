@@ -7,10 +7,10 @@ import HomeNavbar from "../components/home/homeNavbar/homeNavbar.component";
 import HomeGameNav from "@/components/home/homeGameNav/homeGameNav.component";
 import GameReviews from "@/components/home/gameReviews/gameReviews.component";
 import LoadingScreen from "@/screens/loadingScreen/loadingScreen.component";
-
+import NewHomePage from "@/components/home/newHomePage/newHome.component";
 
 import * as url from "./homePageMain.jpg";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RESET_VIDEO } from "@/store/redux/video";
 import { toggleGameActive } from "@/store/redux/guessEleven";
 import LoginForm from "@/components/home/loginForm/loginForm.component";
@@ -72,49 +72,49 @@ export default function Home() {
     <Fragment>
       <Head>
         <title>Twire Arcade - Guess-Eleven and more!</title>
-        <meta charset='UTF-8' />
+        <meta charset="UTF-8" />
         <meta
-          name='description'
-          content='The Brand New Football Arcade With Popular New Games Like Guess-Eleven'
+          name="description"
+          content="The Brand New Football Arcade With Popular New Games Like Guess-Eleven"
         ></meta>
         <meta
-          name='keywords'
-          content='twire, twire arcade, guess eleven, football, missing eleven, guess, eleven, missing'
+          name="keywords"
+          content="twire, twire arcade, guess eleven, football, missing eleven, guess, eleven, missing"
         ></meta>
         <meta
-          name='viewport'
-          content='width=device-width, initial-scale=1.0'
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
         ></meta>
         <meta
-          name='google-site-verification'
-          content='8En94HVVv_-Reu3yzqhPfUPpNOxyDf03rjFzb7uZM74'
+          name="google-site-verification"
+          content="8En94HVVv_-Reu3yzqhPfUPpNOxyDf03rjFzb7uZM74"
         />
       </Head>
 
-      <picture className='background-image'>
-        <source srcSet='/homePageMain.jpg' type='image/jpg' />
+      {/*<picture className="background-image">
+        <source srcSet="/homePageMain.jpg" type="image/jpg" />
         <Image
           ref={setImageRef}
-          src='/homePageMain.jpg'
-          objectFit='cover'
+          src="/homePageMain.jpg"
+          objectFit="cover"
           fill
         />
-      </picture>
+      </picture> */}
 
       {loading || (!imgsLoaded && <LoadingScreen />)}
-      <p className='bs-text'>{bsHome}</p>
+      <p className="bs-text">{bsHome}</p>
       {logReg === 1 && <LoginForm />}
       {logReg === 2 && <RegisterForm />}
 
-      <div className='root-container'>
+      <div>
+        {/* <Confetti />
 
-
-        <Confetti />
-
-        <HomeNavbar onClick={regLog} active='home' />
+        <HomeNavbar onClick={regLog} active="home" />
         <HomeGameNav />
-        <h1 className='home-title'>TWIRE ARCADE</h1>
-        <GameReviews />
+        <h1 className="home-title">TWIRE ARCADE</h1>
+  <GameReviews /> */}
+
+        <NewHomePage />
       </div>
     </Fragment>
   );
