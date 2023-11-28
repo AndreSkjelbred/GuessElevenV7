@@ -1,6 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://db.onlinewebfonts.com/c/2f8845bdde42e943355a39765c5be5c0?family=Druk+Wide+Web+Super+Regular");
 
+@font-face {
+  font-family: "Druk Wide Web Super Regular";
+  src: url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot");
+  src: url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.svg#Druk Wide Web Super Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::after,
 *::before {
