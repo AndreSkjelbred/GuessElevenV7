@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://db.onlinewebfonts.com/c/2f8845bdde42e943355a39765c5be5c0?family=Druk+Wide+Web+Super+Regular");
 
 .home-navbar {
@@ -53,7 +54,7 @@
   color: #f7fbfa;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Druk Wide Web Super Regular";
+  font-family: "Archivo Black", sans-serif;
   font-weight: 300;
   letter-spacing: 0.3rem;
   font-size: 2rem;
