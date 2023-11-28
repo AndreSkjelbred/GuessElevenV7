@@ -6,7 +6,7 @@ const NewHomePage = () => {
     <div className="body">
       <div className="background"></div>
       <header className="header">
-        <div className="logo">
+        <div className="home-logo">
           <span className="title">Twire</span>
           <span className="title">Arcade.</span>
         </div>
